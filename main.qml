@@ -5,6 +5,10 @@ Rectangle {
     width: 800
     height: 480
 
+    BezierDigits {
+        id: digits
+    }
+
     MouseArea {
         id: mouseArea
         anchors.fill: parent
@@ -27,7 +31,7 @@ Rectangle {
 
     Timer {
         id: timer
-        interval: 40 // ~60 FPS (1000/60 = 16) TODO: 17?
+        interval: 16 // ~60 FPS (1000/60 = 16) TODO: 17?
         repeat: true
         triggeredOnStart: true
 

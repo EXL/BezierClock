@@ -3,5 +3,8 @@
         <file>main.qml</file>
         <file>FpsCounter.qml</file>
         <file>BezierCanvas.qml</file>
+		<file>BezierDigit.qml</file>
+		<file>BezierDigits.qml</file>
+        <file>BezierDigitAnimator.qml</file>
     </qresource>
 </RCC>
