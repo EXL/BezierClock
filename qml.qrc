@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>FpsCounter.qml</file>
+        <file>BezierCanvas.qml</file>
     </qresource>
 </RCC>
