@@ -1,6 +1,14 @@
 import QtQuick 2.0
 
-Item {
+Rectangle {
+    width: fpsText.width
+    height: fpsText.height
+
+    visible: showFps
+
+    color: "black"
+    opacity: fpsText.opacity
+
     // FPS Area
     property bool showFps: true
     property int framesCount: 0
@@ -13,11 +21,11 @@ Item {
     property Timer timer: timerOneSec
 
     Text {
-        id: fpsLabel
-        visible: showFps
-
+        id: fpsText
+        color: "white"
+        opacity: 0.5
         text: framesCount + " Frames in " + seconds + " seconds\n" +
-              "FPS: " + fps + "\n" +
+              "Current FPS: " + fps + "\n" +
               "Average FPS: " + (fpsAverage / ((seconds > 1) ? seconds - 1 : 1)).toFixed(2);
     }
 
