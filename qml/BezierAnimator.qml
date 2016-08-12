@@ -45,7 +45,27 @@ Item {
             ratio = CoreFunctions.roundOne(ratio);
         }
 
-        // if (setup.showContinualShadows && !setup.continualAnimation) { }
+        // Continual Shadows
+        if (setup.showContinualShadows && !setup.continualAnimation) {
+            context.lineWidth = setup.digitWidthShadow;
+            context.strokeStyle = setup.digitColorShadow;
+            context.lineCap = setup.digitCap;
+            context.beginPath();
+            context.moveTo(CoreFunctions.lerp(current.getVertexX(),
+                                     next.getVertexX(),
+                                     animationRatio) + origX,
+                           CoreFunctions.lerp(current.getVertexY(),
+                                     next.getVertexY(),
+                                     ratio) + origY);
+            for (var i = 0; i < 4; ++i) {
+                CoreFunctions.bezierVertexFromArrayListsRatios(context,
+                                                      current.getControl(i),
+                                                      next.getControl(i),
+                                                      ratio,
+                                                      origX, origY);
+            }
+            context.stroke();
+        }
 
         // Stroke Settings
         context.lineWidth = setup.digitWidth;

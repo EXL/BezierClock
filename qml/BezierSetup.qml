@@ -10,19 +10,21 @@ Item {
     property real digitRelAllWidth: 1900 * visualScaling
 
     property bool continualAnimation: false
-    property bool showContinualShadows: false
+    property bool showContinualShadows: true
 
     property color backgroundColor: 'orange'
     property color digitColor: 'yellow'
+    property color digitColorShadow: 'gray'
     property string digitCap: 'round'
     property int digitWidth: 10
+    property int digitWidthShadow: 3
 
     // 1 for Linear
     // 2 for Quadratic
     // 3 for Cubic
     // 4 for Sinuisoidial
     // 5 for No animation
-    property int animationType: 5
+    property int animationType: 4
 
     property BezierDigits digits: _digits
 
