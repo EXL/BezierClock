@@ -5,8 +5,8 @@ Rectangle {
     width: 800
     height: 480
 
-    BezierDigits {
-        id: digits
+    BezierSetup {
+        id: setup
     }
 
     MouseArea {

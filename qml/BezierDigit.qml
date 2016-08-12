@@ -4,24 +4,22 @@ Item {
     property real vertexX
     property real vertexY
 
-    property real visualScaling: 1.0
-
     property variant controls: []
 
     function getControl(index) {
         var scaledControl = new Array(6);
         for (var i = 0; i < 6; i++) {
-            scaledControl[i] = controls[index][i] * visualScaling;
+            scaledControl[i] = controls[index][i] * setup.visualScaling;
         }
         return scaledControl;
     }
 
     function getVertexX() {
-        return vertexX * visualScaling;
+        return vertexX * setup.visualScaling;
     }
 
     function getVertexY() {
-        return vertexY * visualScaling;
+        return vertexY * setup.visualScaling;
     }
 
     function initialize() {
