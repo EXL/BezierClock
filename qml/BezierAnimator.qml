@@ -52,17 +52,17 @@ Item {
             context.lineCap = setup.digitCap;
             context.beginPath();
             context.moveTo(CoreFunctions.lerp(current.getVertexX(),
-                                     next.getVertexX(),
-                                     animationRatio) + origX,
+                                              next.getVertexX(),
+                                              animationRatio) + origX,
                            CoreFunctions.lerp(current.getVertexY(),
-                                     next.getVertexY(),
-                                     ratio) + origY);
+                                              next.getVertexY(),
+                                              ratio) + origY);
             for (var i = 0; i < 4; ++i) {
                 CoreFunctions.bezierVertexFromArrayListsRatios(context,
-                                                      current.getControl(i),
-                                                      next.getControl(i),
-                                                      ratio,
-                                                      origX, origY);
+                                                               current.getControl(i),
+                                                               next.getControl(i),
+                                                               ratio,
+                                                               origX, origY);
             }
             context.stroke();
         }
@@ -75,19 +75,68 @@ Item {
         context.beginPath();
         // First point
         context.moveTo(CoreFunctions.lerp(current.getVertexX(),
-                                 next.getVertexX(),
-                                 animationRatio) + origX,
+                                          next.getVertexX(),
+                                          animationRatio) + origX,
                        CoreFunctions.lerp(current.getVertexY(),
-                                 next.getVertexY(),
-                                 animationRatio) + origY);
-        for (var i = 0; i < 4; ++i) {
+                                          next.getVertexY(),
+                                          animationRatio) + origY);
+        for (var j = 0; j < 4; ++j) {
             // Actual Curve
             CoreFunctions.bezierVertexFromArrayListsRatios(context,
-                                                  current.getControl(i),
-                                                  next.getControl(i),
-                                                  animationRatio,
-                                                  origX, origY);
+                                                           current.getControl(j),
+                                                           next.getControl(j),
+                                                           animationRatio,
+                                                           origX, origY);
         }
         context.stroke();
+
+        // Render control lines
+        if (setup.drawControlLines) {
+            context.lineWidth = setup.linesWidth;
+            context.strokeStyle = setup.linesColor;
+
+            for (var k = 0; k < 4; ++k) {
+                CoreFunctions.drawLine(context,
+                                       CoreFunctions.lerp(current.getControl(k)[2], next.getControl(k)[2], animationRatio) + origX,
+                                       CoreFunctions.lerp(current.getControl(k)[3], next.getControl(k)[3], animationRatio) + origY,
+                                       CoreFunctions.lerp(current.getControl(k)[4], next.getControl(k)[4], animationRatio) + origX,
+                                       CoreFunctions.lerp(current.getControl(k)[5], next.getControl(k)[5], animationRatio) + origY);
+
+                CoreFunctions.drawCircle(context,
+                                         CoreFunctions.lerp(current.getControl(k)[2], next.getControl(k)[2], animationRatio) + origX,
+                                         CoreFunctions.lerp(current.getControl(k)[3], next.getControl(k)[3], animationRatio) + origY,
+                                         setup.radius, setup.backgroundColor);
+                if (k < 3) {
+                    CoreFunctions.drawLine(context,
+                                           CoreFunctions.lerp(current.getControl(k+1)[0], next.getControl(k+1)[0], animationRatio) + origX,
+                                           CoreFunctions.lerp(current.getControl(k+1)[1], next.getControl(k+1)[1], animationRatio) + origY,
+                                           CoreFunctions.lerp(current.getControl(k)[4], next.getControl(k)[4], animationRatio) + origX,
+                                           CoreFunctions.lerp(current.getControl(k)[5], next.getControl(k)[5], animationRatio) + origY);
+                    CoreFunctions.drawCircle(context,
+                                             CoreFunctions.lerp(current.getControl(k+1)[0], next.getControl(k+1)[0], animationRatio) + origX,
+                                             CoreFunctions.lerp(current.getControl(k+1)[1], next.getControl(k+1)[1], animationRatio) + origY,
+                                             setup.radius, setup.backgroundColor);
+                }
+                CoreFunctions.drawSquare(context,
+                                         CoreFunctions.lerp(current.getControl(k)[4], next.getControl(k)[4], animationRatio) + origX,
+                                         CoreFunctions.lerp(current.getControl(k)[5], next.getControl(k)[5], animationRatio) + origY,
+                                         setup.radius * 2, setup.backgroundColor, setup.rectColor, setup.linesColor);
+                if (k == 0) {
+                    CoreFunctions.drawLine(context,
+                                           CoreFunctions.lerp(current.getVertexX(), next.getVertexX(), animationRatio) + origX,
+                                           CoreFunctions.lerp(current.getVertexY(), next.getVertexY(), animationRatio) + origY,
+                                           CoreFunctions.lerp(current.getControl(0)[0], next.getControl(0)[0], animationRatio) + origX,
+                                           CoreFunctions.lerp(current.getControl(0)[1], next.getControl(0)[1], animationRatio) + origY);
+                    CoreFunctions.drawCircle(context,
+                                             CoreFunctions.lerp(current.getControl(0)[0], next.getControl(0)[0], animationRatio)  + origX,
+                                             CoreFunctions.lerp(current.getControl(0)[1], next.getControl(0)[1], animationRatio) + origY,
+                                             setup.radius, setup.backgroundColor);
+                    CoreFunctions.drawSquare(context,
+                                             CoreFunctions.lerp(current.getVertexX(), next.getVertexX(), animationRatio) + origX,
+                                             CoreFunctions.lerp(current.getVertexY(), next.getVertexY(), animationRatio) + origY,
+                                             setup.radius * 2, setup.backgroundColor, setup.rectColor, setup.linesColor);
+                }
+            }
+        }
     }
 }

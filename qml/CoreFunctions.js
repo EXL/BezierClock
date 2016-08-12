@@ -38,3 +38,28 @@ function sq(aNumber) {
 function roundOne(aNumber) {
     return (aNumber < 0.5) ? 0.0 : 1.0;
 }
+
+function drawLine(context, startX, startY, endX, endY) {
+    context.beginPath();
+    context.moveTo(startX, startY);
+    context.lineTo(endX, endY);
+    context.stroke();
+}
+
+function drawCircle(context, centerX, centerY, radius, fillColor) {
+    context.beginPath();
+    context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+    context.fillStyle = fillColor;
+    context.fill();
+    context.stroke();
+}
+
+function drawSquare(context, x, y, width, fillColor, strokeColor, baseStokeColor) {
+    context.beginPath();
+    context.rect(x - width / 2, y - width / 2, width, width);
+    context.fillStyle = fillColor;
+    context.fill();
+    context.strokeStyle = strokeColor;
+    context.stroke();
+    context.strokeStyle = baseStokeColor;
+}

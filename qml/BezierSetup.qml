@@ -3,7 +3,7 @@ import QtQuick 2.0
 Item {
     property int yOff: 0
 
-    property real visualScaling: 0.3
+    property real visualScaling: 0.5
     property real animDurationUser: 1.0
 
     property real digitSize: 480 * visualScaling
@@ -11,13 +11,21 @@ Item {
 
     property bool continualAnimation: false
     property bool showContinualShadows: true
+    property bool drawControlLines: true
 
     property color backgroundColor: 'orange'
+
     property color digitColor: 'yellow'
-    property color digitColorShadow: 'gray'
-    property string digitCap: 'round'
     property int digitWidth: 10
+    property string digitCap: 'round'
+
+    property color digitColorShadow: 'gray'
     property int digitWidthShadow: 3
+
+    property color linesColor: 'red'
+    property color rectColor: 'blue'
+    property int linesWidth: 1
+    property int radius: 3
 
     // 1 for Linear
     // 2 for Quadratic
