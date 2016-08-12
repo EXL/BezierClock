@@ -69,7 +69,7 @@ Canvas {
         var minutesUnit = minuteTotal % 10;
         var minutesTen = (minuteTotal % 100 - minuteTotal % 10) / 10;
         var minutesUnitRatio = (secondTotal * 1000 + millis) / 60000.0;
-        var minutesTenRatio = (minutesUnit * 60000 + secondTotal * 1000 + millis) / 60000.0;
+        var minutesTenRatio = (minutesUnit * 60000 + secondTotal * 1000 + millis) / 600000.0;
         setup.minutesTensAnimator.animationStartRatio = Util.getAnimStartRatio(600.0, setup.animDurationUser);
         setup.minutesTensAnimator.update(context,
                                          determineDigit(minutesTen),
