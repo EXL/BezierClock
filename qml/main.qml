@@ -31,7 +31,7 @@ Rectangle {
 
     Timer {
         id: timer
-        interval: 16 // ~60 FPS (1000/60 = 16) TODO: 17?
+        interval: 16 // ~60 FPS (1000/60 = 16)
         repeat: true
         triggeredOnStart: true
 

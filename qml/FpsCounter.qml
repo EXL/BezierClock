@@ -1,8 +1,10 @@
 import QtQuick 2.0
 
 Rectangle {
-    width: fpsText.width
-    height: fpsText.height
+    property int gap: 10
+
+    width: fpsText.width + gap
+    height: fpsText.height + gap
 
     visible: showFps
 
@@ -22,6 +24,8 @@ Rectangle {
 
     Text {
         id: fpsText
+        x: gap / 2
+        y: gap / 2
         color: "white"
         opacity: 0.5
         text: framesCount + " Frames in " + seconds + " seconds\n" +

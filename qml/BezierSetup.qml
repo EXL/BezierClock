@@ -3,7 +3,6 @@ import QtQuick 2.0
 Item {
     property int yOff: 50
     property real visualScaling: 0.3
-    property int animTypeChangeCounter: 1000
     property real animDurationUser: 1.0
 
     property bool continualAnimation: false
@@ -18,7 +17,7 @@ Item {
     // 2 for Quadratic
     // 3 for Cubic
     // 4 for Sinuisoidial
-    property int animationType: 3
+    property int animationType: 1
 
     property BezierDigits digits: _digits
 

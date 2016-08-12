@@ -8,5 +8,6 @@
         <file>qml/BezierAnimator.qml</file>
         <file>qml/AdditionalFunctions.js</file>
         <file>qml/BezierSetup.qml</file>
+        <file>qml/CanvasFunctions.js</file>
     </qresource>
 </RCC>

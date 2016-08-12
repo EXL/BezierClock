@@ -41,15 +41,9 @@ Item {
             ratio = 0.5 * -(Math.cos(ratio * Math.PI) + 1);
         }
 
-        //context.save();
-        //console.log(animationRatio);
+        // if (setup.showContinualShadows && !setup.continualAnimation) { }
 
-        //context.fi
-
-
-        if (setup.showContinualShadows && !setup.continualAnimation) { }
-
-        //var rad = 5.0;
+        // Stroke Settings
         context.lineWidth = setup.digitWidth;
         context.strokeStyle = setup.digitColor;
         context.lineCap = setup.digitCap;
@@ -70,12 +64,6 @@ Item {
                                                   animationRatio,
                                                   origX, origY);
         }
-        //context.closePath();
-        //context.fill(255)
-        context.stroke(); // TODO: ?
-        //context.restore();
-        //console.log('here');
-        // TODO: canvas fill?
-
+        context.stroke();
     }
 }
