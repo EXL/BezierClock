@@ -4,47 +4,14 @@ Rectangle {
     id: root
     width: 800
     height: 480
+    color: setup.backgroundColor
 
     BezierSetup {
         id: setup
     }
 
-    MouseArea {
-        id: mouseArea
-        anchors.fill: parent
-
-        onClicked: {
-            fps.showFps = !fps.showFps;
-        }
-    }
-
-    BezierCanvas {
-        id: canvas
-        anchors.fill: parent
-    }
-
-    FpsCounter {
-        id: fps
-        x: 10
-        y: 64
-    }
-
-    Timer {
-        id: timer
-        interval: 16 // ~60 FPS (1000/60 = 16)
-        repeat: true
-        triggeredOnStart: true
-
-        onTriggered: {
-            fps.framesCount++;
-            fps.framesPerSecond++;
-
-            canvas.requestPaint();
-        }
-    }
-
-    Component.onCompleted: {
-        timer.start();
-        fps.timer.start();
+    BezierClock {
+        id: bezierClock
+        anchors.centerIn: parent
     }
 }

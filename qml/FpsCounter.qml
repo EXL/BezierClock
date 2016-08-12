@@ -28,6 +28,7 @@ Rectangle {
         y: gap / 2
         color: "white"
         opacity: 0.5
+        font.family : 'monospace'
         text: framesCount + " Frames in " + seconds + " seconds\n" +
               "Current FPS: " + fps + "\n" +
               "Average FPS: " + (fpsAverage / ((seconds > 1) ? seconds - 1 : 1)).toFixed(2);
