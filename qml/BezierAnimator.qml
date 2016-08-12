@@ -40,6 +40,9 @@ Item {
         } else if (setup.animationType == 4) { // Sinuisoidial
             animationRatio = 0.5 * (-Math.cos(animationRatio * Math.PI) + 1);
             ratio = 0.5 * (-Math.cos(ratio * Math.PI) + 1);
+        } else if (setup.animationType == 5) { // No animation
+            animationRatio = CoreFunctions.roundOne(animationRatio);
+            ratio = CoreFunctions.roundOne(ratio);
         }
 
         // if (setup.showContinualShadows && !setup.continualAnimation) { }

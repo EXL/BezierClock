@@ -21,7 +21,8 @@ Item {
     // 2 for Quadratic
     // 3 for Cubic
     // 4 for Sinuisoidial
-    property int animationType: 1
+    // 5 for No animation
+    property int animationType: 5
 
     property BezierDigits digits: _digits
 

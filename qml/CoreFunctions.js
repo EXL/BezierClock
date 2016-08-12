@@ -34,3 +34,7 @@ function getAnimStartRatio(totalDuration, animDurationUser) {
 function sq(aNumber) {
     return aNumber * aNumber;
 }
+
+function roundOne(aNumber) {
+    return (aNumber < 0.5) ? 0.0 : 1.0;
+}
