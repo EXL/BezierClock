@@ -3,7 +3,7 @@ import QtQuick 2.0
 Item {
     property int yOff: 0
 
-    property real visualScaling: 0.5
+    property real visualScaling: 0.3
     property real animDurationUser: 1.0
 
     property real digitSize: 480 * visualScaling

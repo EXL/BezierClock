@@ -1,6 +1,6 @@
 import QtQuick 2.0
 
-import "AdditionalFunctions.js" as Util
+import 'CoreFunctions.js' as CoreFunctions
 
 Item {
     property real origX
@@ -32,11 +32,11 @@ Item {
         // Calculate animationRatio
         // 1 - is Linear
         if (setup.animationType == 2) { // Quadratic
-            animationRatio = Util.sq(animationRatio);
-            ratio = Util.sq(ratio);
+            animationRatio = CoreFunctions.sq(animationRatio);
+            ratio = CoreFunctions.sq(ratio);
         } else if (setup.animationType == 3) { // Cubic
-            animationRatio = animationRatio * Util.sq(animationRatio);
-            ratio = ratio * Util.sq(ratio);
+            animationRatio = animationRatio * CoreFunctions.sq(animationRatio);
+            ratio = ratio * CoreFunctions.sq(ratio);
         } else if (setup.animationType == 4) { // Sinuisoidial
             animationRatio = 0.5 * (-Math.cos(animationRatio * Math.PI) + 1);
             ratio = 0.5 * (-Math.cos(ratio * Math.PI) + 1);
@@ -51,15 +51,15 @@ Item {
 
         context.beginPath();
         // First point
-        context.moveTo(Util.lerp(current.getVertexX(),
+        context.moveTo(CoreFunctions.lerp(current.getVertexX(),
                                  next.getVertexX(),
                                  animationRatio) + origX,
-                       Util.lerp(current.getVertexY(),
+                       CoreFunctions.lerp(current.getVertexY(),
                                  next.getVertexY(),
                                  animationRatio) + origY);
         for (var i = 0; i < 4; ++i) {
             // Actual Curve
-            Util.bezierVertexFromArrayListsRatios(context,
+            CoreFunctions.bezierVertexFromArrayListsRatios(context,
                                                   current.getControl(i),
                                                   next.getControl(i),
                                                   animationRatio,

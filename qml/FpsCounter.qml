@@ -8,7 +8,7 @@ Rectangle {
 
     visible: showFps
 
-    color: "black"
+    color: 'black'
     opacity: fpsText.opacity
 
     // FPS Area
@@ -26,17 +26,17 @@ Rectangle {
         id: fpsText
         x: gap / 2
         y: gap / 2
-        color: "white"
+        color: 'white'
         opacity: 0.5
         font.family : 'monospace'
-        text: framesCount + " Frames in " + seconds + " seconds\n" +
-              "Current FPS: " + fps + "\n" +
-              "Average FPS: " + (fpsAverage / ((seconds > 1) ? seconds - 1 : 1)).toFixed(2);
+        text: framesCount + ' Frames in ' + seconds + ' seconds\n' +
+              'Current FPS: ' + fps + '\n' +
+              'Average FPS: ' + (fpsAverage / ((seconds > 1) ? seconds - 1 : 1)).toFixed(2);
     }
 
     Timer {
         id: timerOneSec
-        interval: 1000 // 1 sec
+        interval: 1000 // 1 Second
         repeat: true
         triggeredOnStart: true
 
