@@ -1,9 +1,13 @@
 import QtQuick 2.0
 
 Item {
-    property int yOff: 50
-    property real visualScaling: 0.3
+    property int yOff: 0
+
+    property real visualScaling: 0.35
     property real animDurationUser: 1.0
+
+    property real digitSize: 480 * visualScaling
+    property real digitRelAllWidth: 1900 * visualScaling
 
     property bool continualAnimation: false
     property bool showContinualShadows: false

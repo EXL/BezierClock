@@ -15,10 +15,13 @@ Canvas {
     }
 
     function render(context) {
-        // context.save();
+        context.save();
 
         // Fill Background
         CanvasFunctions.fillCanvasByColor(context, setup.backgroundColor);
+
+        // Translate Context
+        CanvasFunctions.translateContex(context);
 
         // Render Seconds
         currentDate = new Date();
@@ -82,6 +85,6 @@ Canvas {
                                         CanvasFunctions.determineDigit(hoursUnitNext),
                                         hoursUnitRatio);
 
-        // context.restore();
+        context.restore();
     }
 }

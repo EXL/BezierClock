@@ -4,6 +4,11 @@ function fillCanvasByColor(context, color) {
     context.fillRect(0, 0, canvas.width, canvas.height);
 }
 
+function translateContex(context) {
+    context.translate(canvas.width / 2 - setup.digitRelAllWidth / 2 - setup.digitSize / 2,
+                      canvas.height / 2 - setup.digitSize / 2);
+}
+
 function determineDigit(digit) {
     switch (digit) {
     default:

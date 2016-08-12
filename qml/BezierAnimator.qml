@@ -12,7 +12,7 @@ Item {
         var current = currentDigit;
         var next = nextDigit;
 
-        // 1
+        // Set animationRatio
         var animationRatio = 0.0;
         if (ratio > animationStartRatio) {
             animationRatio = (ratio - animationStartRatio) / (1 - animationStartRatio);
@@ -21,7 +21,7 @@ Item {
             animationRatio = ratio;
         }
 
-        // 2
+        // Reset animationRatio
         if (ratio < 0.0) {
             animationRatio = 0.0;
         }
@@ -29,14 +29,15 @@ Item {
             animationRatio = 1.0;
         }
 
-        // 3
-        if (setup.animationType == 2) { // Quad
+        // Calculate animationRatio
+        // 1 - is Linear
+        if (setup.animationType == 2) { // Quadratic
             animationRatio = Util.sq(animationRatio);
             ratio = Util.sq(ratio);
-        } else if (setup.animationType == 3) { // Cube
+        } else if (setup.animationType == 3) { // Cubic
             animationRatio = animationRatio * Util.sq(animationRatio);
             ratio = ratio * Util.sq(ratio);
-        } else if (setup.animationType == 4) { // Sinus
+        } else if (setup.animationType == 4) { // Sinuisoidial
             animationRatio = 0.5 * -(Math.cos(animationRatio * Math.PI) + 1);
             ratio = 0.5 * -(Math.cos(ratio * Math.PI) + 1);
         }
