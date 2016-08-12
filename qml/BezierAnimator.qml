@@ -38,8 +38,8 @@ Item {
             animationRatio = animationRatio * Util.sq(animationRatio);
             ratio = ratio * Util.sq(ratio);
         } else if (setup.animationType == 4) { // Sinuisoidial
-            animationRatio = 0.5 * -(Math.cos(animationRatio * Math.PI) + 1);
-            ratio = 0.5 * -(Math.cos(ratio * Math.PI) + 1);
+            animationRatio = 0.5 * (-Math.cos(animationRatio * Math.PI) + 1);
+            ratio = 0.5 * (-Math.cos(ratio * Math.PI) + 1);
         }
 
         // if (setup.showContinualShadows && !setup.continualAnimation) { }

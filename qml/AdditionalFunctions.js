@@ -1,9 +1,9 @@
 .pragma library
 
 function lerp(value1, value2, amount) {
-    amount = amount < 0 ? 0 : amount;
-    amount = amount > 1 ? 1 : amount;
-    return value1 + (value2 - value1) * amount;
+    // amount = amount < 0 ? 0 : amount;
+    // amount = amount > 1 ? 1 : amount;
+    return ((value2 - value1) * amount) + value1;
 }
 
 function bezierVertexFromArrayListsRatios(context, from, to, ratio, offsetX, offsetY) {
@@ -31,6 +31,6 @@ function getAnimStartRatio(totalDuration, animDurationUser) {
     }
 }
 
-function sq(x) {
-    return x * x;
+function sq(aNumber) {
+    return aNumber * aNumber;
 }
