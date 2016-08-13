@@ -257,8 +257,8 @@ Item {
                     UiSpinBox {
                         id: radiusDotsSpinBox
                         enabled: showDotsCheckBox.checked
-                        minValue: 1
-                        maxValue: 100
+                        minValue: 3
+                        maxValue: 50
                         stepValue: 1
                         labelText: qsTr("Dots Radius")
                     }

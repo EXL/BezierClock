@@ -104,11 +104,11 @@ Item {
                 CoreFunctions.drawCircle(context,
                                          origX + (480 * setup.visualScaling),
                                          (480 / 3) * visualScaling,
-                                         setup.radius, setup.digitColor);
+                                         setup.radiusDots, setup.digitColor);
                 CoreFunctions.drawCircle(context,
                                          origX + (480 * setup.visualScaling),
                                          480 * visualScaling - ((480 / 3) * visualScaling),
-                                         setup.radius, setup.digitColor);
+                                         setup.radiusDots, setup.digitColor);
             }
         }
 
