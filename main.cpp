@@ -1,12 +1,12 @@
 #include <QGuiApplication>
-#include <QQuickView>
+#include <QQmlApplicationEngine>
 
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
 
-    QQuickView view(QUrl(QStringLiteral("qrc:/qml/main.qml")));
-    view.show();
+    QQmlApplicationEngine engine;
+    engine.load(QUrl(QStringLiteral("qrc:/qml/NonKDE/mainQt.qml")));
 
     return app.exec();
 }
