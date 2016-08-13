@@ -49,7 +49,7 @@ Item {
         if (setup.showContinualShadows && !setup.continualAnimation) {
             context.lineWidth = setup.digitWidthShadow;
             context.strokeStyle = setup.digitColorShadow;
-            context.lineCap = setup.digitCap;
+            context.lineCap = CoreFunctions.getLineCap(setup.digitCap);
             context.beginPath();
             context.moveTo(CoreFunctions.lerp(current.getVertexX(),
                                               next.getVertexX(),
@@ -70,7 +70,7 @@ Item {
         // Stroke Settings
         context.lineWidth = setup.digitWidth;
         context.strokeStyle = setup.digitColor;
-        context.lineCap = setup.digitCap;
+        context.lineCap = CoreFunctions.getLineCap(setup.digitCap);
 
         context.beginPath();
         // First point

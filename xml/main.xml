@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+    http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+    <kcfgfile name=""/>
+    <group name="General">
+        <entry name="BackgroundColor" type="Color">
+            <label>Color of the background</label>
+            <default>#FFFFFF</default>
+        </entry>
+        <entry name="DigitColor" type="Color">
+            <label>Color of the digit</label>
+            <default>#000000</default>
+        </entry>
+        <entry name="ControlLinesColor" type="Color">
+            <label>Color of the control lines</label>
+            <default>#FF0000</default>
+        </entry>
+        <entry name="SquaresColor" type="Color">
+            <label>Color of the control squares</label>
+            <default>#0000FF</default>
+        </entry>
+        <entry name="ShadowColor" type="Color">
+            <label>Color of the continual shadows</label>
+            <default>#888888</default>
+        </entry>
+        <entry name="ContinualAnimation" type="Bool">
+            <label>Use Continual Animation</label>
+            <default>false</default>
+        </entry>
+        <entry name="ContinualShadows" type="Bool">
+            <label>Show Continual Shadows</label>
+            <default>false</default>
+        </entry>
+        <entry name="ControlLines" type="Bool">
+            <label>Draw Control Lines</label>
+            <default>false</default>
+        </entry>
+        <entry name="ShowFps" type="Bool">
+            <label>Show FPS</label>
+            <default>false</default>
+        </entry>
+        <entry name="ScalingValue" type="Int">
+            <label>Visual Scaling</label>
+            <default>5</default>
+        </entry>
+        <entry name="DurationAnim" type="Int">
+            <label>Animation Duration</label>
+            <default>100</default>
+        </entry>
+        <entry name="FrameRate" type="Int">
+            <label>Frame Rate</label>
+            <default>60</default>
+        </entry>
+        <entry name="DigitWidth" type="Int">
+            <label>Digits Width</label>
+            <default>10</default>
+        </entry>
+        <entry name="ShadowWidth" type="Int">
+            <label>Shadows Width</label>
+            <default>10</default>
+        </entry>
+        <entry name="LinesWidth" type="Int">
+            <label>Control Lines Width</label>
+            <default>1</default>
+        </entry>
+        <entry name="CirclesRadius" type="Int">
+            <label>Circles Control Width</label>
+            <default>3</default>
+        </entry>
+        <entry name="DigitCap" type="Int">
+            <label>Digit Cap</label>
+            <default>1</default>
+        </entry>
+        <entry name="AnimationType" type="Int">
+            <label>Animation Type</label>
+            <default>0</default>
+        </entry>
+    </group>
+</kcfg>

@@ -1,38 +1,41 @@
 import QtQuick 2.0
 
+import org.kde.plasma.core 2.0 // For wallpaper.configuration
+
 Item {
     property int yOff: 0
 
-    property real visualScaling: 0.5
-    property real animDurationUser: 1.0
+    property color backgroundColor: wallpaper.configuration.BackgroundColor
+    property real visualScaling: wallpaper.configuration.ScalingValue / 10
+    property real animDurationUser: wallpaper.configuration.DurationAnim / 100
+    property bool continualAnimation: wallpaper.configuration.ContinualAnimation
 
-    property real digitSize: 480 * visualScaling
-    property real digitRelAllWidth: 1900 * visualScaling
+    property int showFps: wallpaper.configuration.ShowFps
+    property int frameRate: 1000 / wallpaper.configuration.FrameRate
 
-    property bool continualAnimation: false
-    property bool showContinualShadows: true
-    property bool drawControlLines: true
+    property color digitColor: wallpaper.configuration.DigitColor
+    property int digitWidth: wallpaper.configuration.DigitWidth
+    property int digitCap: wallpaper.configuration.DigitCap
 
-    property color backgroundColor: 'orange'
+    property bool showContinualShadows: wallpaper.configuration.ContinualShadows
+    property color digitColorShadow: wallpaper.configuration.ShadowColor
+    property int digitWidthShadow: wallpaper.configuration.ShadowWidth
 
-    property color digitColor: 'yellow'
-    property int digitWidth: 10
-    property string digitCap: 'round'
-
-    property color digitColorShadow: 'gray'
-    property int digitWidthShadow: 3
-
-    property color linesColor: 'red'
-    property color rectColor: 'blue'
-    property int linesWidth: 1
-    property int radius: 3
+    property bool drawControlLines: wallpaper.configuration.ControlLines
+    property color linesColor: wallpaper.configuration.ControlLinesColor
+    property color rectColor: wallpaper.configuration.SquaresColor
+    property int linesWidth: wallpaper.configuration.LinesWidth
+    property int radius: wallpaper.configuration.CirclesRadius
 
     // 1 for Linear
     // 2 for Quadratic
     // 3 for Cubic
     // 4 for Sinuisoidial
     // 5 for No animation
-    property int animationType: 4
+    property int animationType: wallpaper.configuration.AnimationType + 1
+
+    property real digitSize: 480 * visualScaling
+    property real digitRelAllWidth: 1900 * visualScaling
 
     property BezierDigits digits: _digits
 

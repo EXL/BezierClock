@@ -63,3 +63,15 @@ function drawSquare(context, x, y, width, fillColor, strokeColor, baseStokeColor
     context.stroke();
     context.strokeStyle = baseStokeColor;
 }
+
+function getLineCap(aNumber) {
+    switch (aNumber) {
+    default:
+    case 0:
+        return 'butt';
+    case 1:
+        return 'round';
+    case 2:
+        return 'square';
+    }
+}

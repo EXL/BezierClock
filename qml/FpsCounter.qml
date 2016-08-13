@@ -6,7 +6,7 @@ Rectangle {
     width: fpsText.width + gap
     height: fpsText.height + gap
 
-    visible: showFps
+    visible: setup.showFps
 
     color: 'black'
     opacity: fpsText.opacity

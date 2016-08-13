@@ -4,14 +4,14 @@ Rectangle {
     width: parent.width / 1.187
     height: parent.height / 3.2
 
-    MouseArea {
+    /*MouseArea {
         id: mouseArea
         anchors.fill: parent
 
         onClicked: {
             fps.showFps = !fps.showFps;
         }
-    }
+    }*/
 
     BezierCanvas {
         id: canvas
@@ -24,7 +24,7 @@ Rectangle {
 
     Timer {
         id: timer
-        interval: 16 // ~60 FPS (1000/60 = 16)
+        interval: setup.frameRate
         repeat: true
         triggeredOnStart: true
 
