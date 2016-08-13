@@ -41,6 +41,18 @@
             <label>Show FPS</label>
             <default>false</default>
         </entry>
+        <entry name="ShowDots" type="Bool">
+            <label>Show Dots</label>
+            <default>true</default>
+        </entry>
+        <entry name="BlinkDots" type="Bool">
+            <label>Blink Dots</label>
+            <default>false</default>
+        </entry>
+        <entry name="RadiusDots" type="Int">
+            <label>Dots Radius</label>
+            <default>3</default>
+        </entry>
         <entry name="ScalingValue" type="Int">
             <label>Visual Scaling</label>
             <default>5</default>
@@ -66,7 +78,7 @@
             <default>1</default>
         </entry>
         <entry name="CirclesRadius" type="Int">
-            <label>Circles Control Width</label>
+            <label>Control Circles Radius</label>
             <default>3</default>
         </entry>
         <entry name="DigitCap" type="Int">

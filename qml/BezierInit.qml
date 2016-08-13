@@ -25,6 +25,7 @@ Item {
         id: _hoursUnitsAnimator
         origX: 300.0 * visualScaling
         origY: yOff * visualScaling
+        renderDots: true
         animationStartRatio: 3595.0 / (3595.0 + 5.0)
     }
 
@@ -39,6 +40,7 @@ Item {
         id: _minutesUnitsAnimator
         origX: 1100.0 * visualScaling
         origY: yOff * visualScaling
+        renderDots: true
         animationStartRatio: 55.0 / (55.0 + 5.0)
     }
 

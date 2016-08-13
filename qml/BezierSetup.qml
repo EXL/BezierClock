@@ -27,6 +27,13 @@ Item {
     property int linesWidth: wallpaper.configuration.LinesWidth
     property int radius: wallpaper.configuration.CirclesRadius
 
+    property bool showDots: wallpaper.configuration.ShowDots
+    property bool blinkDots: wallpaper.configuration.BlinkDots
+    property int radiusDots: wallpaper.configuration.RadiusDots
+
+    // Bool flag for blink dots
+    property bool blink: true
+
     // 1 for Linear
     // 2 for Quadratic
     // 3 for Cubic

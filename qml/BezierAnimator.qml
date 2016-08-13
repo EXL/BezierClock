@@ -8,6 +8,8 @@ Item {
 
     property real animationStartRatio
 
+    property bool renderDots: false
+
     function update(context, currentDigit, nextDigit, ratio) {
         var current = currentDigit;
         var next = nextDigit;
@@ -89,6 +91,26 @@ Item {
                                                            origX, origY);
         }
         context.stroke();
+
+        // Render dots
+        if (setup.showDots && renderDots) {
+            var toBlink;
+            if (setup.blinkDots) {
+                toBlink = setup.blink;
+            } else {
+                toBlink = true;
+            }
+            if (toBlink) {
+                CoreFunctions.drawCircle(context,
+                                         origX + (480 * setup.visualScaling),
+                                         (480 / 3) * visualScaling,
+                                         setup.radius, setup.digitColor);
+                CoreFunctions.drawCircle(context,
+                                         origX + (480 * setup.visualScaling),
+                                         480 * visualScaling - ((480 / 3) * visualScaling),
+                                         setup.radius, setup.digitColor);
+            }
+        }
 
         // Render control lines
         if (setup.drawControlLines) {

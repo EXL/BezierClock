@@ -1,19 +1,15 @@
 <RCC>
     <qresource prefix="/">
-    <file>qml/BezierAnimator.qml</file>
-    <file>qml/BezierCanvas.qml</file>
-    <file>qml/BezierClock.qml</file>
-    <file>qml/BezierDigit.qml</file>
-    <file>qml/BezierDigits.qml</file>
-    <file>qml/BezierInit.qml</file>
-    <file>qml/NonKDE/BezierSetupQt.qml</file>
-    <file>qml/JsCanvasFunctions.js</file>
-    <file>qml/JsConfigUiHelper.js</file>
-    <file>qml/JsCoreFunctions.js</file>
-    <file>qml/NonKDE/mainQt.qml</file>
-    <file>qml/UiColorBox.qml</file>
-    <file>qml/UiComboBox.qml</file>
-    <file>qml/UiFpsOverlay.qml</file>
-    <file>qml/UiSpinBox.qml</file>
+        <file>qml/BezierAnimator.qml</file>
+        <file>qml/BezierCanvas.qml</file>
+        <file>qml/BezierClock.qml</file>
+        <file>qml/BezierDigit.qml</file>
+        <file>qml/BezierDigits.qml</file>
+        <file>qml/BezierInit.qml</file>
+        <file>qml/NonKDE/BezierSetupQt.qml</file>
+        <file>qml/JsCanvasFunctions.js</file>
+        <file>qml/JsCoreFunctions.js</file>
+        <file>qml/NonKDE/mainQt.qml</file>
+        <file>qml/UiFpsOverlay.qml</file>
     </qresource>
 </RCC>

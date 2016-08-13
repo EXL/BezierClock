@@ -1,4 +1,19 @@
 
+function getBlinked(aSec) {
+    if (currentSec === aSec) {
+        return false;
+    } else {
+        currentSec = aSec;
+        return true;
+    }
+}
+
+function setBlinked(aSwap) {
+    if (aSwap) {
+        setup.blink = !setup.blink;
+    }
+}
+
 function fillCanvasByColor(context, color) {
     context.fillStyle = color;
     context.fillRect(0, 0, canvas.width, canvas.height);

@@ -22,4 +22,8 @@ function resetToDefault() {
 
     digitCapComboBox.comboBoxIndex = 1;
     animationTypeComboBox.comboBoxIndex = 0;
+
+    showDotsCheckBox.checked = true;
+    blinkCheckBox.checked = false;
+    radiusDotsSpinBox.spinBoxValue = 3;
 }

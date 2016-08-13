@@ -27,6 +27,13 @@ Item {
     property int linesWidth: 1
     property int radius: 3
 
+    property bool showDots: true
+    property bool blinkDots: false
+    property int radiusDots: 3
+
+    // Bool flag for blink dots
+    property bool blink: true
+
     // 1 for Linear
     // 2 for Quadratic
     // 3 for Cubic

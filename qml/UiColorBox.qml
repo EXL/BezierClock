@@ -16,7 +16,7 @@ Item {
     ColorDialog {
         id: colorDialog
         modality: Qt.WindowModal
-        showAlphaChannel: false
+        showAlphaChannel: true
         title: titleDialog
     }
 

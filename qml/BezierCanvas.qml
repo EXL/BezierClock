@@ -8,6 +8,7 @@ Canvas {
     id: canvas
 
     property date currentDate
+    property int currentSec
 
     onPaint: {
         var context2d = getContext('2d');
@@ -41,6 +42,11 @@ Canvas {
                                          CanvasFunctions.determineDigit(secondsTen),
                                          CanvasFunctions.determineDigit(CoreFunctions.getNextInt(secondsTen, 5)),
                                          secondsTenRatio);
+
+        // Blink Dots
+        if (setup.showDots && setup.blinkDots) {
+            CanvasFunctions.setBlinked(CanvasFunctions.getBlinked(secondsUnit));
+        }
 
         // Render Minutes
         var minuteTotal = currentDate.getMinutes();
