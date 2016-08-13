@@ -31,13 +31,13 @@ Canvas {
         var secondsTen = (secondTotal % 100 - secondTotal % 10) / 10;
         var secondsUnitRatio = millis / 1000.0;
         var secondsTenRatio = (secondsUnit * 1000 + millis) / 10000.0;
-        setup.secondsUnitsAnimator.animationStartRatio = CoreFunctions.getAnimStartRatio(1.0, setup.animDurationUser);
-        setup.secondsUnitsAnimator.update(context,
+        setup.init.secondsUnitsAnimator.animationStartRatio = CoreFunctions.getAnimStartRatio(1.0, setup.animDurationUser);
+        setup.init.secondsUnitsAnimator.update(context,
                                           CanvasFunctions.determineDigit(secondsUnit),
                                           CanvasFunctions.determineDigit(CoreFunctions.getNextInt(secondsUnit, 9)),
                                           secondsUnitRatio);
-        setup.secondsTensAnimator.animationStartRatio = CoreFunctions.getAnimStartRatio(10.0, setup.animDurationUser);
-        setup.secondsTensAnimator.update(context,
+        setup.init.secondsTensAnimator.animationStartRatio = CoreFunctions.getAnimStartRatio(10.0, setup.animDurationUser);
+        setup.init.secondsTensAnimator.update(context,
                                          CanvasFunctions.determineDigit(secondsTen),
                                          CanvasFunctions.determineDigit(CoreFunctions.getNextInt(secondsTen, 5)),
                                          secondsTenRatio);
@@ -48,13 +48,13 @@ Canvas {
         var minutesTen = (minuteTotal % 100 - minuteTotal % 10) / 10;
         var minutesUnitRatio = (secondTotal * 1000 + millis) / 60000.0;
         var minutesTenRatio = (minutesUnit * 60000 + secondTotal * 1000 + millis) / 600000.0;
-        setup.minutesTensAnimator.animationStartRatio = CoreFunctions.getAnimStartRatio(600.0, setup.animDurationUser);
-        setup.minutesTensAnimator.update(context,
+        setup.init.minutesTensAnimator.animationStartRatio = CoreFunctions.getAnimStartRatio(600.0, setup.animDurationUser);
+        setup.init.minutesTensAnimator.update(context,
                                          CanvasFunctions.determineDigit(minutesTen),
                                          CanvasFunctions.determineDigit(CoreFunctions.getNextInt(minutesTen, 5)),
                                          minutesTenRatio);
-        setup.minutesUnitsAnimator.animationStartRatio = CoreFunctions.getAnimStartRatio(60.0, setup.animDurationUser);
-        setup.minutesUnitsAnimator.update(context,
+        setup.init.minutesUnitsAnimator.animationStartRatio = CoreFunctions.getAnimStartRatio(60.0, setup.animDurationUser);
+        setup.init.minutesUnitsAnimator.update(context,
                                           CanvasFunctions.determineDigit(minutesUnit),
                                           CanvasFunctions.determineDigit(CoreFunctions.getNextInt(minutesUnit, 9)),
                                           minutesUnitRatio);
@@ -69,18 +69,18 @@ Canvas {
         if (hoursTen == 2 && hoursUnit == 3) {
             hoursUnitNext = 0;
             hoursTenRatio = (hoursUnit * 3600000 + minuteTotal * 60000 + secondTotal * 1000 + millis) / (4 * 3600000.0);
-            setup.hoursTensAnimator.animationStartRatio = CoreFunctions.getAnimStartRatio(3600 * 4, setup.animDurationUser);
+            setup.init.hoursTensAnimator.animationStartRatio = CoreFunctions.getAnimStartRatio(3600 * 4, setup.animDurationUser);
         } else {
             hoursUnitNext = CoreFunctions.getNextInt(hoursUnit, 9);
             hoursTenRatio = (hoursUnit * 3600000 + minuteTotal * 60000 + secondTotal * 1000 + millis) / 36000000.0;
-            setup.hoursTensAnimator.animationStartRatio = CoreFunctions.getAnimStartRatio(3600 * 10, setup.animDurationUser);
+            setup.init.hoursTensAnimator.animationStartRatio = CoreFunctions.getAnimStartRatio(3600 * 10, setup.animDurationUser);
         }
-        setup.hoursTensAnimator.update(context,
+        setup.init.hoursTensAnimator.update(context,
                                        CanvasFunctions.determineDigit(hoursTen),
                                        CanvasFunctions.determineDigit(CoreFunctions.getNextInt(hoursTen, 2)),
                                        hoursTenRatio);
-        setup.hoursUnitsAnimator.animationStartRatio = CoreFunctions.getAnimStartRatio(3600, setup.animDurationUser);
-        setup.hoursUnitsAnimator.update(context,
+        setup.init.hoursUnitsAnimator.animationStartRatio = CoreFunctions.getAnimStartRatio(3600, setup.animDurationUser);
+        setup.init.hoursUnitsAnimator.update(context,
                                         CanvasFunctions.determineDigit(hoursUnit),
                                         CanvasFunctions.determineDigit(hoursUnitNext),
                                         hoursUnitRatio);

@@ -1,8 +1,8 @@
 import QtQuick 2.0
 
 Rectangle {
-    width: parent.width / 1.187
-    height: parent.height / 3.2
+    width: 2300 * setup.visualScaling
+    height: 600 * setup.visualScaling
 
     BezierCanvas {
         id: canvas
@@ -13,6 +13,7 @@ Rectangle {
         id: fps
     }
 
+    // Main Timer
     Timer {
         id: timer
         interval: setup.frameRate

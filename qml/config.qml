@@ -60,7 +60,7 @@ Row {
                 UiSpinBox {
                     id: scalingSpinBox
                     minValue: 1
-                    maxValue: 50
+                    maxValue: 20
                     stepValue: 1
                     labelText: qsTr("Scaling Value")
                 }
@@ -68,7 +68,7 @@ Row {
                 UiSpinBox {
                     id: durationsSpinBox
                     minValue: 0
-                    maxValue: 100
+                    maxValue: 10000
                     stepValue: 1
                     labelText: qsTr("Animation Duration")
                 }
