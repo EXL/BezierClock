@@ -1,6 +1,6 @@
 import QtQuick 2.0
 
-import 'CoreFunctions.js' as CoreFunctions
+import 'JsCoreFunctions.js' as CoreFunctions
 
 Item {
     property real origX

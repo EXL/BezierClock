@@ -1,6 +1,6 @@
 
 function resetToDefault() {
-    // Reset settings to Default values
+    // Reset all settings to Default values
     colorBackgroundBox.colorTo = '#FFFFFF';     // White
     colorDigitBox.colorTo = '#000000';          // Black
     colorShadowBox.colorTo = '#888888';         // Gray

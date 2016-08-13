@@ -4,21 +4,12 @@ Rectangle {
     width: parent.width / 1.187
     height: parent.height / 3.2
 
-    /*MouseArea {
-        id: mouseArea
-        anchors.fill: parent
-
-        onClicked: {
-            fps.showFps = !fps.showFps;
-        }
-    }*/
-
     BezierCanvas {
         id: canvas
         anchors.fill: parent
     }
 
-    FpsCounter {
+    UiFpsOverlay {
         id: fps
     }
 

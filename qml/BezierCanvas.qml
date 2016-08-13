@@ -1,8 +1,8 @@
 import QtQuick 2.0
-import QtQml 2.0 // for Date()
+import QtQml 2.0 // for new Date()
 
-import 'CoreFunctions.js' as CoreFunctions
-import 'CanvasFunctions.js' as CanvasFunctions
+import 'JsCoreFunctions.js' as CoreFunctions
+import 'JsCanvasFunctions.js' as CanvasFunctions
 
 Canvas {
     id: canvas
