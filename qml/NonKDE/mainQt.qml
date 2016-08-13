@@ -7,7 +7,7 @@ Window {
     visible: true
     width: 800
     height: 480
-    title: qsTr("Bezier Clock")
+    title: qsTr('Bezier Clock')
 
     Rectangle {
         id: root

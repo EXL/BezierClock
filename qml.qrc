@@ -11,5 +11,6 @@
         <file>qml/JsCoreFunctions.js</file>
         <file>qml/NonKDE/mainQt.qml</file>
         <file>qml/UiFpsOverlay.qml</file>
+        <file>BC_icon.png</file>
     </qresource>
 </RCC>

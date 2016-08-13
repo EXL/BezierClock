@@ -43,16 +43,16 @@ Item {
 
             GroupBox {
                 id: firstGroupBox // This is element with biggest width
-                title: qsTr("Main Settings")
+                title: qsTr('Main Settings')
 
                 Column {
                     spacing: units.smallSpacing
 
                     UiComboBox {
                         id: animationTypeComboBox
-                        labelText: qsTr("Animation")
-                        modelTo: [qsTr("Linear"), qsTr("Quadratic"), qsTr("Cubic"),
-                            qsTr("Sinuisoidial"), qsTr("No animation")]
+                        labelText: qsTr('Animation')
+                        modelTo: [qsTr('Linear'), qsTr('Quadratic'), qsTr('Cubic'),
+                            qsTr('Sinuisoidial'), qsTr('No animation')]
                         onComboBoxIndexChanged: {
                             if (comboBoxIndex == 4) {
                                 durationsSpinBox.enabled = false
@@ -67,7 +67,7 @@ Item {
                         minValue: 1
                         maxValue: 20
                         stepValue: 1
-                        labelText: qsTr("Scaling Value")
+                        labelText: qsTr('Scaling Value')
                     }
 
                     UiSpinBox {
@@ -75,12 +75,12 @@ Item {
                         minValue: 0
                         maxValue: 10000
                         stepValue: 1
-                        labelText: qsTr("Animation Duration")
+                        labelText: qsTr('Animation Duration')
                     }
 
                     CheckBox {
                         id: continualAnimationCheckBox
-                        text: qsTr("Continual Animation")
+                        text: qsTr('Continual Animation')
                         onCheckedChanged: {
                             if (checked == true) {
                                 continualShadowsCheckBox.checked = false;
@@ -90,14 +90,14 @@ Item {
 
                     UiColorBox {
                         id: colorBackgroundBox
-                        titleDialog: qsTr("Select Background Color")
-                        labelText: qsTr("Background Color")
+                        titleDialog: qsTr('Select Background Color')
+                        labelText: qsTr('Background Color')
                     }
                 }
             }
 
             GroupBox {
-                title: qsTr("Digits Settings")
+                title: qsTr('Digits Settings')
                 width: firstGroupBox.width
 
                 Column {
@@ -108,19 +108,19 @@ Item {
                         minValue: 1
                         maxValue: 100
                         stepValue: 1
-                        labelText: qsTr("Digits Width")
+                        labelText: qsTr('Digits Width')
                     }
 
                     UiComboBox {
                         id: digitCapComboBox
-                        labelText: qsTr("Digits Cap")
-                        modelTo: [qsTr("Butt"), qsTr("Round"), qsTr("Square")]
+                        labelText: qsTr('Digits Cap')
+                        modelTo: [qsTr('Butt'), qsTr('Round'), qsTr('Square')]
                     }
 
                     UiColorBox {
                         id: colorDigitBox
-                        titleDialog: qsTr("Select Digits Color")
-                        labelText: qsTr("Digits Color")
+                        titleDialog: qsTr('Select Digits Color')
+                        labelText: qsTr('Digits Color')
                     }
                 }
             }
@@ -130,7 +130,7 @@ Item {
             spacing: units.smallSpacing
 
             GroupBox {
-                title: qsTr("Continual Shadows")
+                title: qsTr('Continual Shadows')
                 width: firstGroupBox.width
 
                 Column {
@@ -138,7 +138,7 @@ Item {
 
                     CheckBox {
                         id: continualShadowsCheckBox
-                        text: qsTr("Show Continual Shadows")
+                        text: qsTr('Show Continual Shadows')
                         onCheckedChanged: {
                             if (checked == true) {
                                 continualAnimationCheckBox.checked = false;
@@ -152,20 +152,20 @@ Item {
                         minValue: 1
                         maxValue: 100
                         stepValue: 1
-                        labelText: qsTr("Shadow Width")
+                        labelText: qsTr('Shadow Width')
                     }
 
                     UiColorBox {
                         id: colorShadowBox
                         enabled: continualShadowsCheckBox.checked
-                        titleDialog: qsTr("Select Shadows Color")
-                        labelText: qsTr("Shadows Color")
+                        titleDialog: qsTr('Select Shadows Color')
+                        labelText: qsTr('Shadows Color')
                     }
                 }
             }
 
             GroupBox {
-                title: qsTr("Control Lines")
+                title: qsTr('Control Lines')
                 width: firstGroupBox.width
 
                 Column {
@@ -173,7 +173,7 @@ Item {
 
                     CheckBox {
                         id: controlLinesCheckBox
-                        text: qsTr("Show Control Lines")
+                        text: qsTr('Show Control Lines')
                     }
 
                     UiSpinBox {
@@ -182,7 +182,7 @@ Item {
                         minValue: 1
                         maxValue: 100
                         stepValue: 1
-                        labelText: qsTr("Control Lines Width")
+                        labelText: qsTr('Control Lines Width')
                     }
 
                     UiSpinBox {
@@ -191,21 +191,21 @@ Item {
                         minValue: 1
                         maxValue: 100
                         stepValue: 1
-                        labelText: qsTr("Shapes Radius")
+                        labelText: qsTr('Shapes Radius')
                     }
 
                     UiColorBox {
                         id: colorLinesBox
                         enabled: controlLinesCheckBox.checked
-                        titleDialog: qsTr("Select Lines Color")
-                        labelText: qsTr("Lines Color")
+                        titleDialog: qsTr('Select Lines Color')
+                        labelText: qsTr('Lines Color')
                     }
 
                     UiColorBox {
                         id: colorRectsBox
                         enabled: controlLinesCheckBox.checked
-                        titleDialog: qsTr("Select Squares Color")
-                        labelText: qsTr("Squares Color")
+                        titleDialog: qsTr('Select Squares Color')
+                        labelText: qsTr('Squares Color')
                     }
                 }
             }
@@ -215,7 +215,7 @@ Item {
             spacing: units.smallSpacing
 
             GroupBox {
-                title: qsTr("FPS settings")
+                title: qsTr('FPS settings')
                 width: firstGroupBox.width
 
                 Column {
@@ -226,18 +226,18 @@ Item {
                         minValue: 1
                         maxValue: 1000
                         stepValue: 1
-                        labelText: qsTr("FPS Limit")
+                        labelText: qsTr('FPS Limit')
                     }
 
                     CheckBox {
                         id: showFpsCheckBox
-                        text: qsTr("Show FPS")
+                        text: qsTr('Show FPS')
                     }
                 }
             }
 
             GroupBox {
-                title: qsTr("Dots Settings")
+                title: qsTr('Dots Settings')
                 width: firstGroupBox.width
 
                 Column {
@@ -245,12 +245,12 @@ Item {
 
                     CheckBox {
                         id: showDotsCheckBox
-                        text: qsTr("Show Dots")
+                        text: qsTr('Show Dots')
                     }
 
                     CheckBox {
                         id: blinkCheckBox
-                        text: qsTr("Blink Dots")
+                        text: qsTr('Blink Dots')
                         enabled: showDotsCheckBox.checked
                     }
 
@@ -260,7 +260,7 @@ Item {
                         minValue: 3
                         maxValue: 50
                         stepValue: 1
-                        labelText: qsTr("Dots Radius")
+                        labelText: qsTr('Dots Radius')
                     }
                 }
             }
@@ -268,7 +268,7 @@ Item {
             Button {
                 id: resetButton
                 width: firstGroupBox.width
-                text: qsTr("Reset to Default")
+                text: qsTr('Reset to Default')
 
                 onClicked: {
                     ConfigUiHelper.resetToDefault();
