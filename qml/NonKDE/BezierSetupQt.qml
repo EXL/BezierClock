@@ -1,38 +1,38 @@
 import QtQuick 2.0
 
-import org.kde.plasma.core 2.0 // For wallpaper.configuration
+import '../'
 
 Item {
     property int yOff: 0
 
-    property color backgroundColor: wallpaper.configuration.BackgroundColor
-    property real visualScaling: wallpaper.configuration.ScalingValue / 10
-    property real animDurationUser: wallpaper.configuration.DurationAnim / 100
-    property bool continualAnimation: wallpaper.configuration.ContinualAnimation
+    property color backgroundColor: '#FFFFFF';
+    property real visualScaling: 3 / 10
+    property real animDurationUser: 100
+    property bool continualAnimation: false
 
-    property bool showFps: wallpaper.configuration.ShowFps
-    property int frameRate: 1000 / wallpaper.configuration.FrameRate
+    property bool showFps: false
+    property int frameRate: 1000 / 60
 
-    property color digitColor: wallpaper.configuration.DigitColor
-    property int digitWidth: wallpaper.configuration.DigitWidth
-    property int digitCap: wallpaper.configuration.DigitCap
+    property color digitColor: '#000000';
+    property int digitWidth: 10
+    property int digitCap: 1
 
-    property bool showContinualShadows: wallpaper.configuration.ContinualShadows
-    property color digitColorShadow: wallpaper.configuration.ShadowColor
-    property int digitWidthShadow: wallpaper.configuration.ShadowWidth
+    property bool showContinualShadows: false
+    property color digitColorShadow: '#888888';
+    property int digitWidthShadow: 10
 
-    property bool drawControlLines: wallpaper.configuration.ControlLines
-    property color linesColor: wallpaper.configuration.ControlLinesColor
-    property color rectColor: wallpaper.configuration.SquaresColor
-    property int linesWidth: wallpaper.configuration.LinesWidth
-    property int radius: wallpaper.configuration.CirclesRadius
+    property bool drawControlLines: false
+    property color linesColor: '#FF0000'
+    property color rectColor: '#0000FF'
+    property int linesWidth: 1
+    property int radius: 3
 
     // 1 for Linear
     // 2 for Quadratic
     // 3 for Cubic
     // 4 for Sinuisoidial
     // 5 for No animation
-    property int animationType: wallpaper.configuration.AnimationType + 1
+    property int animationType: 1
 
     property real digitSize: 480 * visualScaling
     property real digitRelAllWidth: 1900 * visualScaling
