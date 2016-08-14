@@ -131,8 +131,8 @@ Item {
 
     BezierDigit { // Digit 9
         id: digit9
-        vertexX: 243.0;
-        vertexY: 242.0;
+        vertexX: 322.0;
+        vertexY: 105.0;
 
         Component.onCompleted: {
             initDigit([323.0, 6.0, 171.0, 33.0, 151.0, 85.0],
