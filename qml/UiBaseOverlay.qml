@@ -31,6 +31,7 @@ Rectangle {
     property int gap: 10
 
     property alias textTo: textLabel.text
+    property alias fontTo: textLabel.font.family
 
     width: textLabel.width + gap
     height: textLabel.height + gap

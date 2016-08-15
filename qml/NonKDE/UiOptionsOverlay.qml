@@ -30,6 +30,8 @@ UiBaseOverlay {
     property bool playAnimation: false
     property alias animation: _animation
 
+    fontTo: 'courier new'
+
     visible: false
 
     NumberAnimation on opacity {
