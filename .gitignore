@@ -38,3 +38,8 @@ CMakeLists.txt.user*
 
 # User files
 .directory
+
+# Packages
+utils/*.tar.*
+utils/src
+utils/pkg

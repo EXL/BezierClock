@@ -1,0 +1,41 @@
+pkgname=bezier-clock
+pkgver=v1.0
+pkgrel=1
+pkgdesc='Bezier Clock live wallpaper for the Plasma Workspace'
+arch=('any')
+url='http://exlmoto.ru/bezier-clock'
+license=('MIT')
+depends=('plasma-workspace')
+source=("$pkgname-$pkgver.tar.gz")
+sha256sums=('SKIP')
+makedepends=('extra-cmake-modules')
+
+# Directories
+base_dir=build-bezier-clock-package
+build_dir=$base_dir/build
+app_dir=$base_dir/bezier-clock
+contents_dir=$app_dir/contents
+
+prepare() {
+	mkdir -p $build_dir
+	mkdir -p $contents_dir/{ui,icon,config}
+	cp BezierClock/utils/metadata.desktop $app_dir
+	cp BezierClock/qml/{*.qml,*.js} $contents_dir/ui
+	cp BezierClock/images/BC_icon.png $contents_dir/icon
+	cp BezierClock/xml/main.xml $contents_dir/config
+	cp BezierClock/utils/CMakeLists.txt $base_dir
+}
+
+build() {
+	cd $build_dir
+	cmake .. \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DBUILD_TESTING=OFF
+	make
+}
+
+package() {
+	cd $build_dir
+	make DESTDIR="${pkgdir}" install
+}
