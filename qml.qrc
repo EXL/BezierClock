@@ -15,6 +15,6 @@
         <file>qml/JsCoreFunctions.js</file>
         <file>qml/UiFpsOverlay.qml</file>
         <file>qml/UiBaseOverlay.qml</file>
-        <file>BC_icon.png</file>
+        <file>images/BC_icon.png</file>
     </qresource>
 </RCC>
