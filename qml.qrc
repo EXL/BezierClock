@@ -1,16 +1,20 @@
 <RCC>
     <qresource prefix="/">
+        <file>qml/NonKDE/BezierSettingsQt.qml</file>
+        <file>qml/NonKDE/JsMainUiHelper.js</file>
+        <file>qml/NonKDE/mainQt.qml</file>
+        <file>qml/NonKDE/UiOptionsOverlay.qml</file>
         <file>qml/BezierAnimator.qml</file>
         <file>qml/BezierCanvas.qml</file>
         <file>qml/BezierClock.qml</file>
         <file>qml/BezierDigit.qml</file>
         <file>qml/BezierDigits.qml</file>
         <file>qml/BezierInit.qml</file>
-        <file>qml/NonKDE/BezierSetupQt.qml</file>
+        <file>qml/BezierSetup.qml</file>
         <file>qml/JsCanvasFunctions.js</file>
         <file>qml/JsCoreFunctions.js</file>
-        <file>qml/NonKDE/mainQt.qml</file>
         <file>qml/UiFpsOverlay.qml</file>
+        <file>qml/UiBaseOverlay.qml</file>
         <file>BC_icon.png</file>
     </qresource>
 </RCC>

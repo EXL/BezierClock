@@ -1,45 +1,45 @@
 import QtQuick 2.0
 
-import org.kde.plasma.core 2.0 // For wallpaper.configuration
+import '../'
 
 Item {
     property int yOff: 0
 
-    property color backgroundColor: wallpaper.configuration.BackgroundColor
-    property real visualScaling: wallpaper.configuration.ScalingValue / 10
-    property real animDurationUser: wallpaper.configuration.DurationAnim / 100
-    property bool continualAnimation: wallpaper.configuration.ContinualAnimation
+    property color backgroundColor: settings.backgroundColor
+    property real visualScaling: settings.visualScaling
+    property real animDurationUser: settings.animDurationUser
+    property bool continualAnimation: settings.continualAnimation
 
-    property bool showFps: wallpaper.configuration.ShowFps
-    property int frameRate: 1000 / wallpaper.configuration.FrameRate
+    property bool showFps: settings.showFps
+    property int frameRate: settings.frameRate
 
-    property color digitColor: wallpaper.configuration.DigitColor
-    property int digitWidth: wallpaper.configuration.DigitWidth
-    property int digitCap: wallpaper.configuration.DigitCap
+    property color digitColor: settings.digitColor
+    property int digitWidth: settings.digitWidth
+    property int digitCap: settings.digitCap
 
-    property bool showContinualShadows: wallpaper.configuration.ContinualShadows
-    property color digitColorShadow: wallpaper.configuration.ShadowColor
-    property int digitWidthShadow: wallpaper.configuration.ShadowWidth
+    property bool showContinualShadows: settings.showContinualShadows
+    property color digitColorShadow: settings.digitColorShadow
+    property int digitWidthShadow: settings.digitWidthShadow
 
-    property bool drawControlLines: wallpaper.configuration.ControlLines
-    property color linesColor: wallpaper.configuration.ControlLinesColor
-    property color rectColor: wallpaper.configuration.SquaresColor
-    property int linesWidth: wallpaper.configuration.LinesWidth
-    property int radius: wallpaper.configuration.CirclesRadius
+    property bool drawControlLines: settings.drawControlLines
+    property color linesColor: settings.linesColor
+    property color rectColor: settings.rectColor
+    property int linesWidth: settings.linesWidth
+    property int radius: settings.radius
 
-    property bool showDots: wallpaper.configuration.ShowDots
-    property bool blinkDots: wallpaper.configuration.BlinkDots
-    property int radiusDots: wallpaper.configuration.RadiusDots
-
-    // Bool flag for blink dots
-    property bool blink: true
+    property bool showDots: settings.showDots
+    property bool blinkDots: settings.blinkDots
+    property int radiusDots: settings.radiusDots
 
     // 1 for Linear
     // 2 for Quadratic
     // 3 for Cubic
     // 4 for Sinuisoidial
     // 5 for No animation
-    property int animationType: wallpaper.configuration.AnimationType + 1
+    property int animationType: settings.animationType
+
+    // Bool flag for blink dots
+    property bool blink: true
 
     property real digitSize: 480 * visualScaling
     property real digitRelAllWidth: 1900 * visualScaling

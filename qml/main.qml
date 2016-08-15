@@ -6,6 +6,10 @@ Rectangle {
     height: 480
     color: setup.backgroundColor
 
+    BezierSettings {
+        id: settings
+    }
+
     BezierSetup {
         id: setup
     }

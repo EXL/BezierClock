@@ -1,5 +1,7 @@
 .pragma library
 
+var DEFAULT_OVERLAY_OPACITY = 0.7;
+
 function lerp(value1, value2, amount) {
     // amount = amount < 0 ? 0 : amount;
     // amount = amount > 1 ? 1 : amount;
@@ -73,5 +75,22 @@ function getLineCap(aNumber) {
         return 'round';
     case 2:
         return 'square';
+    }
+}
+
+function getAnimationType(aNumber) {
+    switch (aNumber) {
+    default:
+    case 0:
+    case 1:
+        return 'linear';
+    case 2:
+        return 'quadratic';
+    case 3:
+        return 'cubic';
+    case 4:
+        return 'sinuisoidial';
+    case 5:
+        return 'no animation';
     }
 }
