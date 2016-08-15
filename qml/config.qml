@@ -42,6 +42,7 @@ Row {
 
         GroupBox {
             title: qsTr('Main Settings')
+            width: aboutLabel.width
 
             Column {
                 spacing: units.smallSpacing
@@ -276,33 +277,48 @@ Row {
             }
         }
 
-        Button {
-            id: resetButton
-            width: aboutLabel.width
-            text: qsTr('Reset to Default')
-            tooltip: qsTr('Reset all settings to Default')
-
-            onClicked: {
-                ConfigUiHelper.resetToDefault();
-            }
-        }
-
-        Button {
-            id: aboutButton
-            height: image.height
-            width: image.width
-
-            tooltip: qsTr('Show About Information')
-
-            anchors.horizontalCenter: resetButton.horizontalCenter
-
-            onClicked: {
-                aboutLabel.visible = !aboutLabel.visible
-            }
+        Row {
+            spacing: units.smallSpacing
 
             Image {
                 id: image
                 source: '../icon/BC_icon.png'
+            }
+
+            Column {
+                spacing: units.smallSpacing
+
+                Button {
+                    id: resetButton
+                    width: aboutLabel.width - image.width - units.smallSpacing
+                    anchors.top: image.top
+
+                    text: qsTr('Reset to Default')
+                    tooltip: qsTr('Reset all settings to Default')
+
+                    onClicked: {
+                        ConfigUiHelper.resetToDefault();
+                    }
+                }
+
+                Button {
+                    id: aboutButton
+                    width: aboutLabel.width - image.width - units.smallSpacing
+                    anchors.bottom: image.bottom
+
+                    property bool showLabel: true
+                    property string show: qsTr('Show About')
+                    property string hide: qsTr('Hide About')
+
+                    text: show
+                    tooltip: qsTr('Show/Hide About Information')
+
+                    onClicked: {
+                        aboutLabel.visible = !aboutLabel.visible;
+                        showLabel = !showLabel;
+                        text = (showLabel) ? show : hide;
+                    }
+                }
             }
         }
     }
