@@ -66,7 +66,7 @@ Row {
 
         GroupBox {
             title: qsTr('Main Settings')
-            width: aboutLabel.width
+            id: mainGroupBox // This is element with biggest width
 
             Column {
                 spacing: units.smallSpacing
@@ -121,7 +121,7 @@ Row {
 
         GroupBox {
             title: qsTr('Digits Settings')
-            width: aboutLabel.width
+            width: mainGroupBox.width
 
             Column {
                 spacing: units.smallSpacing
@@ -149,7 +149,7 @@ Row {
         }
 
         Label {
-            id: aboutLabel // This is element with biggest width
+            id: aboutLabel
             visible: false
             onLinkActivated: Qt.openUrlExternally(link)
             text: qsTr('<br><br><strong>Bezier Clock</strong> v1.0<br><br>'+
@@ -167,7 +167,7 @@ Row {
 
         GroupBox {
             title: qsTr('Continual Shadows')
-            width: aboutLabel.width
+            width: mainGroupBox.width
 
             Column {
                 spacing: units.smallSpacing
@@ -202,7 +202,7 @@ Row {
 
         GroupBox {
             title: qsTr('Control Lines')
-            width: aboutLabel.width
+            width: mainGroupBox.width
 
             Column {
                 spacing: units.smallSpacing
@@ -252,7 +252,7 @@ Row {
 
         GroupBox {
             title: qsTr('FPS settings')
-            width: aboutLabel.width
+            width: mainGroupBox.width
 
             Column {
                 spacing: units.smallSpacing
@@ -274,7 +274,7 @@ Row {
 
         GroupBox {
             title: qsTr('Dots Settings')
-            width: aboutLabel.width
+            width: mainGroupBox.width
 
             Column {
                 spacing: units.smallSpacing
@@ -314,7 +314,7 @@ Row {
 
                 Button {
                     id: resetButton
-                    width: aboutLabel.width - image.width - units.smallSpacing
+                    width: mainGroupBox.width - image.width - units.smallSpacing
                     anchors.top: image.top
 
                     text: qsTr('Reset to Default')
@@ -327,7 +327,7 @@ Row {
 
                 Button {
                     id: aboutButton
-                    width: aboutLabel.width - image.width - units.smallSpacing
+                    width: mainGroupBox.width - image.width - units.smallSpacing
                     anchors.bottom: image.bottom
 
                     property bool showLabel: true
