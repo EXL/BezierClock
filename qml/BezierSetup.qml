@@ -31,11 +31,6 @@ Item {
     property bool blinkDots: settings.blinkDots
     property int radiusDots: settings.radiusDots
 
-    // 1 for Linear
-    // 2 for Quadratic
-    // 3 for Cubic
-    // 4 for Sinuisoidial
-    // 5 for No animation
     property int animationType: settings.animationType
 
     // Bool flag for blink dots

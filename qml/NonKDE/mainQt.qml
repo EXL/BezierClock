@@ -59,7 +59,7 @@ Window {
         }
 
         Keys.onPressed: {
-            MainUiHelper.keyPushed(event);
+            MainUiHelper.keyPressed(event);
         }
     }
 

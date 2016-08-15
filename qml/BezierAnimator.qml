@@ -47,11 +47,12 @@ Item {
             ratio = CoreFunctions.roundOne(ratio);
         }
 
+        context.lineCap = CoreFunctions.getLineCap(setup.digitCap);
+
         // Continual Shadows
         if (setup.showContinualShadows && !setup.continualAnimation) {
             context.lineWidth = setup.digitWidthShadow;
             context.strokeStyle = setup.digitColorShadow;
-            context.lineCap = CoreFunctions.getLineCap(setup.digitCap);
             context.beginPath();
             context.moveTo(CoreFunctions.lerp(current.getVertexX(),
                                               next.getVertexX(),
@@ -69,11 +70,9 @@ Item {
             context.stroke();
         }
 
-        // Stroke Settings
+        // Render Digit
         context.lineWidth = setup.digitWidth;
         context.strokeStyle = setup.digitColor;
-        context.lineCap = CoreFunctions.getLineCap(setup.digitCap);
-
         context.beginPath();
         // First point
         context.moveTo(CoreFunctions.lerp(current.getVertexX(),
@@ -92,7 +91,7 @@ Item {
         }
         context.stroke();
 
-        // Render dots
+        // Render Dots
         if (setup.showDots && renderDots) {
             var toBlink;
             if (setup.blinkDots) {
@@ -104,15 +103,15 @@ Item {
                 CoreFunctions.drawCircle(context,
                                          origX + (480 * setup.visualScaling),
                                          (480 / 3) * visualScaling,
-                                         setup.radiusDots, setup.digitColor);
+                                         setup.radiusDots, setup.digitColor, false);
                 CoreFunctions.drawCircle(context,
                                          origX + (480 * setup.visualScaling),
                                          480 * visualScaling - ((480 / 3) * visualScaling),
-                                         setup.radiusDots, setup.digitColor);
+                                         setup.radiusDots, setup.digitColor, false);
             }
         }
 
-        // Render control lines
+        // Render Control Lines
         if (setup.drawControlLines) {
             context.lineWidth = setup.linesWidth;
             context.strokeStyle = setup.linesColor;
@@ -127,7 +126,7 @@ Item {
                 CoreFunctions.drawCircle(context,
                                          CoreFunctions.lerp(current.getControl(k)[2], next.getControl(k)[2], animationRatio) + origX,
                                          CoreFunctions.lerp(current.getControl(k)[3], next.getControl(k)[3], animationRatio) + origY,
-                                         setup.radius, setup.backgroundColor);
+                                         setup.radius, setup.backgroundColor, true);
                 if (k < 3) {
                     CoreFunctions.drawLine(context,
                                            CoreFunctions.lerp(current.getControl(k+1)[0], next.getControl(k+1)[0], animationRatio) + origX,
@@ -137,7 +136,7 @@ Item {
                     CoreFunctions.drawCircle(context,
                                              CoreFunctions.lerp(current.getControl(k+1)[0], next.getControl(k+1)[0], animationRatio) + origX,
                                              CoreFunctions.lerp(current.getControl(k+1)[1], next.getControl(k+1)[1], animationRatio) + origY,
-                                             setup.radius, setup.backgroundColor);
+                                             setup.radius, setup.backgroundColor, true);
                 }
                 CoreFunctions.drawSquare(context,
                                          CoreFunctions.lerp(current.getControl(k)[4], next.getControl(k)[4], animationRatio) + origX,
@@ -152,7 +151,7 @@ Item {
                     CoreFunctions.drawCircle(context,
                                              CoreFunctions.lerp(current.getControl(0)[0], next.getControl(0)[0], animationRatio)  + origX,
                                              CoreFunctions.lerp(current.getControl(0)[1], next.getControl(0)[1], animationRatio) + origY,
-                                             setup.radius, setup.backgroundColor);
+                                             setup.radius, setup.backgroundColor, true);
                     CoreFunctions.drawSquare(context,
                                              CoreFunctions.lerp(current.getVertexX(), next.getVertexX(), animationRatio) + origX,
                                              CoreFunctions.lerp(current.getVertexY(), next.getVertexY(), animationRatio) + origY,

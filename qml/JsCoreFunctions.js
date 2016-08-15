@@ -48,12 +48,14 @@ function drawLine(context, startX, startY, endX, endY) {
     context.stroke();
 }
 
-function drawCircle(context, centerX, centerY, radius, fillColor) {
+function drawCircle(context, centerX, centerY, radius, fillColor, stroke) {
     context.beginPath();
     context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
     context.fillStyle = fillColor;
     context.fill();
-    context.stroke();
+    if (stroke) {
+        context.stroke();
+    }
 }
 
 function drawSquare(context, x, y, width, fillColor, strokeColor, baseStokeColor) {

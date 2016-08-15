@@ -1,5 +1,5 @@
 
-function keyPushed(event) {
+function keyPressed(event) {
     if (event.key === Qt.Key_Z) {
         setup.showFps = !setup.showFps;
         showOptionsOverlay(qsTr('FPS Settings'), qsTr('Show FPS'), setup.showFps);
@@ -30,7 +30,7 @@ function keyPushed(event) {
         }
     } else if (event.key === Qt.Key_M) {
         if (setup.showDots) {
-            if (setup.radiusDots > 3) {
+            if (setup.radiusDots > 1) {
                 --setup.radiusDots;
             }
             showOptionsOverlay(qsTr('Dots Settings'), qsTr('Dots Radius'), setup.radiusDots);
@@ -208,7 +208,7 @@ function resetToDefault() {
 
     setup.showDots = true;
     setup.blinkDots = false;
-    setup.radiusDots = 3;
+    setup.radiusDots = 5;
 }
 
 function getRandomColor() {

@@ -28,7 +28,7 @@ Settings {
 
     property bool showDots: true
     property bool blinkDots: false
-    property int radiusDots: 3
+    property int radiusDots: 5
 
     // 1 for Linear
     // 2 for Quadratic

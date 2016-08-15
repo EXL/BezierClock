@@ -51,7 +51,7 @@
         </entry>
         <entry name="RadiusDots" type="Int">
             <label>Dots Radius</label>
-            <default>3</default>
+            <default>5</default>
         </entry>
         <entry name="ScalingValue" type="Int">
             <label>Visual Scaling</label>

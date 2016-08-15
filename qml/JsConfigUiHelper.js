@@ -25,5 +25,5 @@ function resetToDefault() {
 
     showDotsCheckBox.checked = true;
     blinkCheckBox.checked = false;
-    radiusDotsSpinBox.spinBoxValue = 3;
+    radiusDotsSpinBox.spinBoxValue = 5;
 }
