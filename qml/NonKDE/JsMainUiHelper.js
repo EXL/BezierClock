@@ -197,7 +197,7 @@ function showHelpOverlay() {
                               '|                                    |                                   |\n' +
                               '| F4 - Reset All Settings to Default |                                   |\n' +
                               '+------------------------------------+-----------------------------------+\n' +
-                              'Port to KDE Plasma 5: © EXL, 2016\n' +
+                              'Port to Qt Quick/QML: © EXL, 2016\n' +
                               'exl@bk.ru | exlmotodev@gmail.com\n\n' +
                               'Original: © Jack Frigaard, 2014');
     overlayHelp.visible = true;
