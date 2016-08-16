@@ -60,4 +60,6 @@ Settings {
     // 4 for Sinuisoidial
     // 5 for No animation
     property int animationType: 1
+
+    property bool fullscreen: false
 }

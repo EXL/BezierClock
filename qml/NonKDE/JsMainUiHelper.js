@@ -22,8 +22,20 @@
 ** SOFTWARE.
 ************************************************************************************/
 
+function toggleFullscreen() {
+    settings.fullscreen = !settings.fullscreen;
+    if (settings.fullscreen) {
+        rootWindow.visibility = 'FullScreen';
+    } else {
+        rootWindow.visibility = 'Windowed';
+    }
+}
+
 function keyPressed(event) {
-    if (event.key === Qt.Key_Z) {
+    if (event.key === Qt.Key_F2) {
+        toggleFullscreen();
+        showOptionsOverlay(qsTr('Main Settings'), qsTr('Fullscreen'), settings.fullscreen);
+    } else if (event.key === Qt.Key_Z) {
         setup.showFps = !setup.showFps;
         showOptionsOverlay(qsTr('FPS Settings'), qsTr('Show FPS'), setup.showFps);
     } else if (event.key === Qt.Key_X) {
@@ -195,7 +207,7 @@ function showHelpOverlay() {
                               '| S - Increase Scaling Value         | D - Reduce Scaling Value          |\n' +
                               '| F - Increase Animation Duration    | G - Reduce Animation Duration     |\n' +
                               '|                                    |                                   |\n' +
-                              '| F4 - Reset All Settings to Default |                                   |\n' +
+                              '| F4 - Reset All Settings to Default | F2 - Toggle Fullscreen            |\n' +
                               '+------------------------------------+-----------------------------------+\n' +
                               'Port to Qt Quick/QML: © EXL, 2016\n' +
                               'exl@bk.ru | exlmotodev@gmail.com\n\n' +

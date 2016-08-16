@@ -23,7 +23,7 @@
 ************************************************************************************/
 
 import QtQuick 2.0
-import QtQuick.Window 2.0
+import QtQuick.Window 2.1
 
 import '../'
 
@@ -31,6 +31,7 @@ import 'JsMainUiHelper.js' as MainUiHelper
 import '../JsCoreFunctions.js' as CoreFunctions
 
 Window {
+    id: rootWindow
     visible: true
     width: 800
     height: 480
@@ -88,6 +89,7 @@ Window {
     }
 
     Component.onCompleted: {
+        settings.fullscreen = false;
         MainUiHelper.showHelpOverlay();
     }
 
