@@ -153,7 +153,7 @@ function keyPressed(event) {
             }
             showOptionsOverlay(qsTr('Main Settings'), qsTr('Animation Duration'), setup.animDurationUser.toFixed(3));
         }
-    } else if (event.key === Qt.Key_H) {
+    } else if (event.key === Qt.Key_H || event.key === Qt.Key_F1) {
         showHelpOverlay();
     } else if (event.key === Qt.Key_J) {
         setRandomColors();
@@ -182,7 +182,7 @@ function showHelpOverlay() {
                               '+------------------------------------+-----------------------------------+\n' +
                               '| Left Click - Show Control Lines    | Right Click - Continual Animation |\n' +
                               '|                                    |                                   |\n' +
-                              '| H - This help                      | J - Randomize Color               |\n' +
+                              '| H, F1 - This help                  | J - Randomize Color               |\n' +
                               '| Z - Show Fps                       | V - Show Dots                     |\n' +
                               '| X - Increase Frame Rate            | C - Reduce Frame Rate             |\n' +
                               '| N - Increase Dots Radius           | M - Reduce Dots Radius            |\n' +
@@ -227,7 +227,7 @@ function resetToDefault() {
     setup.radius = 3;
 
     setup.digitCap = 1;
-    setup.animationType = 0;
+    setup.animationType = 1;
 
     setup.showDots = true;
     setup.blinkDots = false;
