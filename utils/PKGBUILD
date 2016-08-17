@@ -23,15 +23,16 @@
 #######################################################################################
 
 pkgname=bezier-clock
-pkgver=v1.0
+ver=1.0
+pkgver=v$ver
 pkgrel=1
 pkgdesc='Bezier Clock live wallpaper for the Plasma Workspace'
 arch=('any')
 url='http://exlmoto.ru/bezier-clock'
 license=('MIT')
 depends=('plasma-workspace')
-source=("$pkgname-$pkgver.tar.gz")
-sha256sums=('SKIP')
+source=("https://github.com/EXL/BezierClock/archive/$pkgver.tar.gz")
+sha256sums=('ca60121292eb78a2143f09651a2c43dbe3fdcd0cda2127603d09f0f3eaffe765')
 makedepends=('extra-cmake-modules')
 
 # Directories
@@ -43,11 +44,11 @@ contents_dir=$app_dir/contents
 prepare() {
 	mkdir -p $build_dir
 	mkdir -p $contents_dir/{ui,icon,config}
-	cp BezierClock/utils/*.desktop $app_dir
-	cp BezierClock/qml/{*.qml,*.js} $contents_dir/ui
-	cp BezierClock/images/BC_icon.png $contents_dir/icon
-	cp BezierClock/xml/main.xml $contents_dir/config
-	cp BezierClock/utils/CMakeLists.txt $base_dir
+	cp BezierClock-$ver/utils/*.desktop $app_dir
+	cp BezierClock-$ver/qml/{*.qml,*.js} $contents_dir/ui
+	cp BezierClock-$ver/images/BC_icon.png $contents_dir/icon
+	cp BezierClock-$ver/xml/main.xml $contents_dir/config
+	cp BezierClock-$ver/utils/CMakeLists.txt $base_dir
 }
 
 build() {
