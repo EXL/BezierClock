@@ -1,0 +1,7 @@
+Record video from the screen:
+
+$ sleep 1 && ffmpeg -video_size 1366x768 -framerate 30 -f x11grab -i :0.0+0,0 output.mp4
+
+Record GIF-animation from the part of the screen:
+
+$ ffmpeg -video_size 455x140 -framerate 25 -f x11grab -i :0.0+454,315 input.gif
