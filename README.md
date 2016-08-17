@@ -8,6 +8,7 @@ Port Processing.js [Bezier Clock by Jack Frigaard](http://frigaardj.github.io/be
 Repository contains code of:
 
 * Bezier Clock Live Wallpaper with settings window
+
 Right click on Plasma Desktop, click on "Desktop Settings" and choose "Bezier Clock" from "Wallpaper Type":
 
 ![Bezier Clock Settings](https://raw.github.com/EXL/BezierClock/master/images/Screenshot_settings.png)
