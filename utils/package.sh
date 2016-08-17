@@ -45,7 +45,7 @@ func_package() {
     mkdir -p $CONFIG_DIR
 
     # Copy package files
-    cp metadata.desktop $PACKAGE_DIR
+    cp *.desktop $PACKAGE_DIR
     cp ../qml/{*.qml,*.js} $UI_DIR
     cp ../images/BC_icon.png $ICON_DIR
     cp ../xml/main.xml $CONFIG_DIR

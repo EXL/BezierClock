@@ -43,7 +43,7 @@ contents_dir=$app_dir/contents
 prepare() {
 	mkdir -p $build_dir
 	mkdir -p $contents_dir/{ui,icon,config}
-	cp BezierClock/utils/metadata.desktop $app_dir
+	cp BezierClock/utils/*.desktop $app_dir
 	cp BezierClock/qml/{*.qml,*.js} $contents_dir/ui
 	cp BezierClock/images/BC_icon.png $contents_dir/icon
 	cp BezierClock/xml/main.xml $contents_dir/config
