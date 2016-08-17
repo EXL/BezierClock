@@ -89,7 +89,7 @@ Window {
     }
 
     Component.onCompleted: {
-        settings.fullscreen = false;
+        MainUiHelper.checkFullscreen();
         MainUiHelper.showHelpOverlay();
     }
 

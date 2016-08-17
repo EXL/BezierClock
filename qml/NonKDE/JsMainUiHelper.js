@@ -22,13 +22,17 @@
 ** SOFTWARE.
 ************************************************************************************/
 
-function toggleFullscreen() {
-    settings.fullscreen = !settings.fullscreen;
+function checkFullscreen() {
     if (settings.fullscreen) {
         rootWindow.visibility = 'FullScreen';
     } else {
         rootWindow.visibility = 'Windowed';
     }
+}
+
+function toggleFullscreen() {
+    settings.fullscreen = !settings.fullscreen;
+    checkFullscreen();
 }
 
 function keyPressed(event) {
@@ -244,6 +248,9 @@ function resetToDefault() {
     setup.showDots = true;
     setup.blinkDots = false;
     setup.radiusDots = 5;
+
+    settings.fullscreen = false;
+    checkFullscreen();
 }
 
 function getRandomColor() {
