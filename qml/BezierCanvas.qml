@@ -55,7 +55,7 @@ Canvas {
         var secondsUnit = secondTotal % 10;
         var secondsTen = (secondTotal % 100 - secondTotal % 10) / 10;
         var secondsUnitRatio = millis / 1000.0;
-        var secondsTenRatio = (secondsUnit * 1000 + millis) / 10000.0;
+        var secondsTenRatio = (secondsUnit * 1000 + millis) / 10000.0;/*
         setup.init.secondsUnitsAnimator.animationStartRatio = CoreFunctions.getAnimStartRatio(1.0, setup.animDurationUser);
         setup.init.secondsUnitsAnimator.update(context,
                                           CanvasFunctions.determineDigit(secondsUnit),
@@ -65,7 +65,7 @@ Canvas {
         setup.init.secondsTensAnimator.update(context,
                                          CanvasFunctions.determineDigit(secondsTen),
                                          CanvasFunctions.determineDigit(CoreFunctions.getNextInt(secondsTen, 5)),
-                                         secondsTenRatio);
+                                         secondsTenRatio);*/
 
         // Blink Dots
         if (setup.showDots && setup.blinkDots) {

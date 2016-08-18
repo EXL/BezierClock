@@ -40,14 +40,14 @@ Item {
 
     BezierAnimator { // X0:00:00
         id: _hoursTensAnimator
-        origX: 0.0 * visualScaling
+        origX: 300.0 * visualScaling
         origY: yOff * visualScaling
         animationStartRatio: 35995.0 / (35995.0 + 5.0)
     }
 
     BezierAnimator { // 0X:00:00
         id: _hoursUnitsAnimator
-        origX: 300.0 * visualScaling
+        origX: 600.0 * visualScaling
         origY: yOff * visualScaling
         renderDots: true
         animationStartRatio: 3595.0 / (3595.0 + 5.0)
@@ -55,16 +55,16 @@ Item {
 
     BezierAnimator { // 00:X0:00
         id: _minutesTensAnimator
-        origX: 800.0 * visualScaling
+        origX: 1100.0 * visualScaling
         origY: yOff * visualScaling
         animationStartRatio: 595.0 / (595.0 + 5.0)
     }
 
     BezierAnimator { // 00:0X:00
         id: _minutesUnitsAnimator
-        origX: 1100.0 * visualScaling
+        origX: 1400.0 * visualScaling
         origY: yOff * visualScaling
-        renderDots: true
+        // renderDots: true
         animationStartRatio: 55.0 / (55.0 + 5.0)
     }
 
