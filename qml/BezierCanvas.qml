@@ -43,7 +43,8 @@ Canvas {
         context.save();
 
         // Fill Background
-        CanvasFunctions.fillCanvasByColor(context, setup.backgroundColor);
+        // CanvasFunctions.fillCanvasByColor(context, setup.backgroundColor);
+        context.clearRect(0, 0, canvas.width, canvas.height);
 
         // Translate Context
         CanvasFunctions.translateContex(context);

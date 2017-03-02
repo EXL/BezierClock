@@ -28,6 +28,8 @@ Rectangle {
     width: 2300 * setup.visualScaling
     height: 600 * setup.visualScaling
 
+    color: "transparent"
+
     BezierCanvas {
         id: canvas
         anchors.fill: parent

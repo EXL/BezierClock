@@ -24,11 +24,12 @@
 
 import QtQuick 2.0
 
-Rectangle {
+import org.kde.plasma.core 2.0 as Plasmacore
+
+Image {
     id: root
-    width: 800
-    height: 480
-    color: setup.backgroundColor
+    fillMode: wallpaper.configuration.FillMode
+    source: "http://wstaw.org/m/2017/03/02/wall_1.png"
 
     BezierSettings {
         id: settings
