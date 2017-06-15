@@ -21,6 +21,9 @@ Video demonstration:
 
 [Bezier Clock on YouTube](http://youtu.be/S5bH2YC9VdM)
 
+## Download
+
+You can download TAR.XZ-packages for KDE Plasma 5 from the [releases](https://github.com/EXL/BezierClock/releases) section.
 
 ## Get the source code
 
