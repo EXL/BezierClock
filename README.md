@@ -3,7 +3,7 @@ Bezier Clock
 
 Port Processing.js [Bezier Clock by Jack Frigaard](http://frigaardj.github.io/bezier-clock/) to Qt Quick/QML for KDE Plasma 5 Live Wallpaper.
 
-![Bezier Clock Animation](https://raw.github.com/EXL/BezierClock/master/images/Bezier_clock_animation.gif)
+![Bezier Clock Animation](images/Bezier_clock_animation.gif)
 
 Repository contains code of:
 
@@ -11,11 +11,11 @@ Repository contains code of:
 
 Right click on Plasma Desktop, click on "Desktop Settings" and choose "Bezier Clock" from "Wallpaper Type":
 
-![Bezier Clock Settings](https://raw.github.com/EXL/BezierClock/master/images/Screenshot_settings.png)
+![Bezier Clock Settings](images/Screenshot_settings.png)
 
 * Simple standalone Qt Quick/QML Application:
 
-![Bezier Clock Application on MS Windows 10](https://raw.github.com/EXL/BezierClock/master/images/Screenshot_app.png)
+![Bezier Clock Application on MS Windows 10](images/Screenshot_app.png)
 
 Video demonstration:
 
