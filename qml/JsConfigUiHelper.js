@@ -49,4 +49,7 @@ function resetToDefault() {
     showDotsCheckBox.checked = true;
     blinkCheckBox.checked = false;
     radiusDotsSpinBox.spinBoxValue = 5;
+
+    fillImageComboBox.comboBoxIndex = 0;
+    wallpaperEnableComboBox.checked = false;
 }
