@@ -61,7 +61,7 @@ Row {
     property alias cfg_RadiusDots: radiusDotsSpinBox.spinBoxValue
 
     property alias cfg_Image: img_wallpreview.source
-    property alias cfg_FillMode: img_wallpreview.fillMode
+    property alias cfg_FillMode: fillImageComboBox.comboBoxIndex
     property alias cfg_WallEnable: wallpaperEnableComboBox.checked
 
     spacing: units.smallSpacing
@@ -403,6 +403,7 @@ Row {
 
     FileDialog {
         id: fileDialog
+        folder: '~/'
         title: qsTr("ru.exlmoto.bezierclock", "Please choose an image")
         nameFilters: [ "Image files (*.jpg *.png)", "All files (*)" ]
         onAccepted: {
