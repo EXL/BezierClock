@@ -36,7 +36,7 @@ function resetToDefault() {
     showFpsCheckBox.checked = false;
 
     scalingSpinBox.spinBoxValue = 5;
-    durationsSpinBox.spinBoxValue = 100;
+    durationsSpinBox.spinBoxValue = 50;
     fpsLimitSpinBox.spinBoxValue = 60;
     digitsWidthSpinBox.spinBoxValue = 10;
     shadowsWidthSpinBox.spinBoxValue = 10;
