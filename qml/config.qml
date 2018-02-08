@@ -180,7 +180,7 @@ Row {
             id: aboutLabel
             visible: false
             onLinkActivated: Qt.openUrlExternally(link)
-            text: qsTr('<br><strong>Bezier Clock</strong><br><font color="gray">v1.1 | 08-FEB-2018</font><br><br>' +
+            text: qsTr('<br><strong>Bezier Clock</strong><br><font color="gray">v1.1 | 09-FEB-2018</font><br><br>' +
                        'KDE Plasma 5 Port: © <font color="orange"><b>EXL</b></font>, 2016<br>' +
                        '<a href="http://exlmoto.ru/bezier-clock">exlmoto.ru/bezier-clock</a><br>' +
                        '<a href="https://github.com/EXL/BezierClock">github.com/EXL/BezierClock</a><br>' +
