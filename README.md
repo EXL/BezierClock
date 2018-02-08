@@ -11,7 +11,7 @@ Repository contains code of:
 
 Right click on Plasma Desktop, click on "Desktop Settings" and choose "Bezier Clock" from "Wallpaper Type":
 
-![Bezier Clock Settings](images/Screenshot_settings.png)
+![Bezier Clock KDE Plasma 5 Settings](images/Screenshot_settings.png)
 
 * Simple standalone Qt Quick/QML Application:
 
@@ -119,7 +119,7 @@ sudo pacman -R bezier-clock
 **Warning!**
 In some versions of the KDE Plasma 5 Workspace (5.7.x for example) after the installation and activating Bezier Clock you can see a black screen.
 It is due to these bugs here: [bug #1](https://bugs.kde.org/show_bug.cgi?id=367546) and [bug #2](https://bugs.kde.org/show_bug.cgi?id=366390).
-Reset to default settings using the "Reset To Default" button and click "Apply" for fix it.
+Reset to default settings using the "Reset To Default" button and click "Apply" for fix it. -- Not relevant for the v1.1
 
 To reduce the load on the CPU cores, lower the value of the option "FPS Limit" to acceptable values.
 To ensure a smooth animation at low FPS, you can adjust the option "Animation Duration", with lowering its value.
