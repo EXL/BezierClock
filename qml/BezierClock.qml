@@ -28,6 +28,10 @@ Rectangle {
     width: 2300 * setup.visualScaling
     height: 600 * setup.visualScaling
 
+    color: {
+        (setup.wallEnable) ? "transparent" : setup.backgroundColor
+    }
+
     BezierCanvas {
         id: canvas
         anchors.fill: parent

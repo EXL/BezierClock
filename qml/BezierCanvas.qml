@@ -43,7 +43,11 @@ Canvas {
         context.save();
 
         // Fill Background
-        CanvasFunctions.fillCanvasByColor(context, setup.backgroundColor);
+        if (setup.wallEnable) {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+        } else {
+            CanvasFunctions.fillCanvasByColor(context, setup.backgroundColor);
+        }
 
         // Translate Context
         CanvasFunctions.translateContex(context);

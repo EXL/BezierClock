@@ -235,7 +235,7 @@ function resetToDefault() {
     setup.showFps = false;
 
     setup.visualScaling = 0.3;
-    setup.animDurationUser = 1;
+    setup.animDurationUser = 0.5;
     setup.frameRate = 16;
     setup.digitWidth = 10;
     setup.digitWidthShadow = 10;

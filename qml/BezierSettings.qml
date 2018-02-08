@@ -59,4 +59,8 @@ Item {
     // 4 for Sinuisoidial
     // 5 for No animation
     property int animationType: wallpaper.configuration.AnimationType + 1
+
+    property string imgSource: wallpaper.configuration.Image
+    property int imgFillMode: wallpaper.configuration.FillMode
+    property bool wallEnable: wallpaper.configuration.WallEnable
 }

@@ -23,6 +23,7 @@
 ************************************************************************************/
 
 import QtQuick 2.0
+import QtQuick.Dialogs 1.2
 import QtQuick.Controls 1.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore // For units
@@ -58,6 +59,10 @@ Row {
     property alias cfg_ShowDots: showDotsCheckBox.checked
     property alias cfg_BlinkDots: blinkCheckBox.checked
     property alias cfg_RadiusDots: radiusDotsSpinBox.spinBoxValue
+
+    property alias cfg_Image: img_wallpreview.source
+    property alias cfg_FillMode: img_wallpreview.fillMode
+    property alias cfg_WallEnable: wallpaperEnableComboBox.checked
 
     spacing: units.smallSpacing
 
@@ -144,6 +149,55 @@ Row {
                     id: colorDigitBox
                     titleDialog: qsTr('Select Digits Color')
                     labelText: qsTr('Digits Color')
+                }
+            }
+        }
+
+        GroupBox {
+            title: qsTr('Wallpaper Settings')
+            width: mainGroupBox.width
+
+            Column {
+                spacing: units.smallSpacing
+                Rectangle {
+                    border.color: "black"
+                    border.width: 2
+                    width: 160
+                    height: 90
+                    Image {
+                        id: img_wallpreview
+                        anchors.margins: 2
+                        anchors.fill: parent
+                        fillMode: cfg_FillMode
+                        source: cfg_Image
+                        antialiasing: true
+                        MouseArea {
+                            anchors.fill: parent
+                            onClicked: fileDialog.open()
+                        }
+                        onSourceChanged: {
+                            if (source != '') {
+                                wallpaperEnableComboBox.enabled = true
+                            } else {
+                                wallpaperEnableComboBox.enabled = false
+                                wallpaperEnableComboBox.checked = false
+                            }
+                        }
+                    }
+                }
+
+                UiComboBox {
+                    id: fillImageComboBox
+                    labelText: qsTr('Fill Mode')
+                    modelTo: [qsTr('Scaled and Cropped'), qsTr('Scaled'), qsTr('Scaled, Keep Proportions'), qsTr('Centered'), qsTr('Tiled')]
+                    onComboBoxIndexChanged: {
+                        cfg_FillMode = comboBoxIndex
+                    }
+                }
+
+                CheckBox {
+                    id: wallpaperEnableComboBox
+                    text: qsTr('Enable Wallpaper')
                 }
             }
         }
@@ -347,6 +401,15 @@ Row {
         }
     }
 
+    FileDialog {
+        id: fileDialog
+        title: qsTr("ru.exlmoto.bezierclock", "Please choose an image")
+        nameFilters: [ "Image files (*.jpg *.png)", "All files (*)" ]
+        onAccepted: {
+            cfg_Image = fileDialog.fileUrls[0]
+        }
+    }
+
     Component.onCompleted: {
         // Trying to avoid KDE Plasma bug with ignoring default values
         // See https://bugs.kde.org/show_bug.cgi?id=367546
@@ -354,6 +417,12 @@ Row {
         // This bug is still not fixed in Plasma 5.12 LTS
         if (cfg_FrameRate <= 1) {
             ConfigUiHelper.resetToDefault();
+        }
+        if (img_wallpreview.source != '') {
+            wallpaperEnableComboBox.enabled = true
+        } else {
+            wallpaperEnableComboBox.enabled = false
+            wallpaperEnableComboBox.checked = false
         }
     }
 }

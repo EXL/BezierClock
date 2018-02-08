@@ -63,6 +63,10 @@ Item {
     property real digitSize: 480 * visualScaling
     property real digitRelAllWidth: 1900 * visualScaling
 
+    property string imgSource: settings.imgSource
+    property int imgFillMode: settings.imgFillMode
+    property int wallEnable: settings.wallEnable
+
     property BezierInit init: _init
 
     BezierInit {

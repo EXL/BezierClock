@@ -113,6 +113,10 @@
             <label>Animation Type</label>
             <default>0</default>
         </entry>
+        <entry name="WallEnable" type="Bool">
+            <label>Enable Wallpaper</label>
+            <default>false</default>
+        </entry>
     </group>
 
 </kcfg>

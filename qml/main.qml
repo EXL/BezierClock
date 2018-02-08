@@ -24,11 +24,18 @@
 
 import QtQuick 2.0
 
-Rectangle {
+Image {
     id: root
     width: 800
     height: 480
-    color: setup.backgroundColor
+
+    Rectangle {
+        anchors.fill: parent
+        color: (setup.wallEnable) ? 'transparent' : setup.backgroundColor
+    }
+
+    source: setup.imgSource
+    fillMode: setup.imgFillMode
 
     BezierSettings {
         id: settings

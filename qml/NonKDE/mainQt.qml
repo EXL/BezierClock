@@ -56,10 +56,9 @@ Window {
         }
     }
 
-    Rectangle {
+    Image {
         width: parent.width
         height: parent.height
-        color: setup.backgroundColor
         focus: true
 
         BezierSetup {
