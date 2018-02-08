@@ -6,7 +6,7 @@ Type=Service
 ServiceTypes=Plasma/Wallpaper
 
 X-KDE-PluginInfo-Name=ru.exlmoto.bezierclock
-X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-Version=1.1
 X-KDE-PluginInfo-Author=Serg Koles
 X-KDE-PluginInfo-Email=exlmotodev@gmail.com
 X-KDE-PluginInfo-Website=http://exlmoto.ru/bezier-clock
