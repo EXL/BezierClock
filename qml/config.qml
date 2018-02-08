@@ -25,7 +25,7 @@
 import QtQuick 2.0
 import QtQuick.Controls 1.0
 
-import org.kde.plasma.core 2.0 // For units
+import org.kde.plasma.core 2.0 as PlasmaCore // For units
 
 import 'JsConfigUiHelper.js' as ConfigUiHelper
 
@@ -33,7 +33,7 @@ Row {
     id: root
 
     // All settings
-    property alias cfg_BackgroundColor: colorBackgroundBox.colorTo
+    property alias cfg_Color: colorBackgroundBox.colorTo
     property alias cfg_DigitColor: colorDigitBox.colorTo
     property alias cfg_ShadowColor: colorShadowBox.colorTo
     property alias cfg_ControlLinesColor: colorLinesBox.colorTo
