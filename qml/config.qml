@@ -177,13 +177,13 @@ Row {
             id: aboutLabel
             visible: false
             onLinkActivated: Qt.openUrlExternally(link)
-            text: qsTr('<br><br><strong>Bezier Clock</strong> v1.0<br><br>'+
-                       'Port to KDE Plasma 5: © <font color="orange"><b>EXL</b></font>, 2016<br>' +
-                       '<a href="http://exlmoto.ru/bezier-clock">http://exlmoto.ru/bezier-clock</a><br>' +
-                       '<a href="https://github.com/EXL/BezierClock">https://github.com/EXL/BezierClock</a><br>' +
-                       '<a href="mailto:exl@bk.ru">exl@bk.ru</a> | <a href="mailto:exlmotodev@gmail.com">exlmotodev@gmail.com</a><br><br>' +
+            text: qsTr('<br><strong>Bezier Clock</strong> v1.0<br><br>'+
+                       'KDE Plasma 5 Port: © <font color="orange"><b>EXL</b></font>, 2016<br>' +
+                       '<a href="http://exlmoto.ru/bezier-clock">exlmoto.ru/bezier-clock</a><br>' +
+                       '<a href="https://github.com/EXL/BezierClock">github.com/EXL/BezierClock</a><br>' +
+                       'Emails: <a href="mailto:exl@bk.ru">[1]</a>, <a href="mailto:exlmotodev@gmail.com">[2]</a><br><br>' +
                        'Original: © <font color="green"><b>Jack Frigaard</b></font>, 2014<br>' +
-                       '<a href="http://frigaardj.github.io/bezier-clock/">http://frigaardj.github.io/bezier-clock</a>')
+                       '<a href="http://frigaardj.github.io/bezier-clock/">frigaardj.github.io/bezier-clock</a>')
         }
     }
 
