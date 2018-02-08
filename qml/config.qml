@@ -70,7 +70,59 @@ Row {
         spacing: units.smallSpacing
 
         GroupBox {
-            title: qsTr('Main Settings')
+            title: qsTr('Wallpaper Settings')
+            width: mainGroupBox.width
+
+            Column {
+                spacing: units.smallSpacing
+
+                Rectangle {
+                    width: 160
+                    height: 90
+                    border.color: "#3daee9"
+                    border.width: 2
+
+                    Image {
+                        id: imgWallpreview
+                        anchors.margins: 2
+                        anchors.fill: parent
+                        fillMode: cfg_FillMode
+                        source: cfg_Image
+                        antialiasing: false
+                        onSourceChanged: {
+                            if (source != '') {
+                                wallpaperEnableComboBox.enabled = true
+                            } else {
+                                wallpaperEnableComboBox.enabled = false
+                                wallpaperEnableComboBox.checked = false
+                            }
+                        }
+
+                        MouseArea {
+                            anchors.fill: parent
+                            onClicked: fileDialog.open()
+                        }
+                    }
+                }
+
+                UiComboBox {
+                    id: fillImageComboBox
+                    labelText: qsTr('Fill Mode')
+                    modelTo: [qsTr('Scaled and Cropped'), qsTr('Scaled'), qsTr('Scaled, Keep Proportions'), qsTr('Centered'), qsTr('Tiled')]
+                    onComboBoxIndexChanged: {
+                        cfg_FillMode = comboBoxIndex
+                    }
+                }
+
+                CheckBox {
+                    id: wallpaperEnableComboBox
+                    text: qsTr('Enable Wallpaper')
+                }
+            }
+        }
+
+        GroupBox {
+            title: qsTr('General Settings')
             id: mainGroupBox // This is element with biggest width
 
             Column {
@@ -124,63 +176,11 @@ Row {
             }
         }
 
-        GroupBox {
-            title: qsTr('Wallpaper Settings')
-            width: mainGroupBox.width
-
-            Column {
-                spacing: units.smallSpacing
-
-                Rectangle {
-                    width: 160
-                    height: 90
-                    border.color: "#3daee9"
-                    border.width: 2
-
-                    Image {
-                        id: imgWallpreview
-                        anchors.margins: 2
-                        anchors.fill: parent
-                        fillMode: cfg_FillMode
-                        source: cfg_Image
-                        antialiasing: false
-                        onSourceChanged: {
-                            if (source != '') {
-                                wallpaperEnableComboBox.enabled = true
-                            } else {
-                                wallpaperEnableComboBox.enabled = false
-                                wallpaperEnableComboBox.checked = false
-                            }
-                        }
-
-                        MouseArea {
-                            anchors.fill: parent
-                            onClicked: fileDialog.open()
-                        }
-                    }
-                }
-
-                UiComboBox {
-                    id: fillImageComboBox
-                    labelText: qsTr('Fill Mode')
-                    modelTo: [qsTr('Scaled and Cropped'), qsTr('Scaled'), qsTr('Scaled, Keep Proportions'), qsTr('Centered'), qsTr('Tiled')]
-                    onComboBoxIndexChanged: {
-                        cfg_FillMode = comboBoxIndex
-                    }
-                }
-
-                CheckBox {
-                    id: wallpaperEnableComboBox
-                    text: qsTr('Enable Wallpaper')
-                }
-            }
-        }
-
         Label {
             id: aboutLabel
             visible: false
             onLinkActivated: Qt.openUrlExternally(link)
-            text: qsTr('<br><strong>Bezier Clock</strong> v1.1<br><i>08-FEB-2018</i><br><br>'+
+            text: qsTr('<br><strong>Bezier Clock</strong><br><font color="gray">v1.1 | 08-FEB-2018</font><br><br>' +
                        'KDE Plasma 5 Port: © <font color="orange"><b>EXL</b></font>, 2016<br>' +
                        '<a href="http://exlmoto.ru/bezier-clock">exlmoto.ru/bezier-clock</a><br>' +
                        '<a href="https://github.com/EXL/BezierClock">github.com/EXL/BezierClock</a><br>' +
@@ -372,7 +372,6 @@ Row {
                 Button {
                     id: resetButton
                     width: mainGroupBox.width - image.width - units.smallSpacing
-                    anchors.top: image.top
 
                     text: qsTr('Reset to Default')
                     tooltip: qsTr('Reset all settings to Default')
@@ -385,7 +384,6 @@ Row {
                 Button {
                     id: aboutButton
                     width: mainGroupBox.width - image.width - units.smallSpacing
-                    anchors.bottom: image.bottom
 
                     property bool showLabel: true
                     property string show: qsTr('Show About')
