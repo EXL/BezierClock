@@ -23,7 +23,7 @@
 #######################################################################################
 
 pkgname=bezier-clock
-ver=1.0
+ver=1.1
 pkgver=v$ver
 pkgrel=1
 pkgdesc='Bezier Clock live wallpaper for the Plasma Workspace'
@@ -32,7 +32,7 @@ url='http://exlmoto.ru/bezier-clock'
 license=('MIT')
 depends=('plasma-workspace')
 source=("https://github.com/EXL/BezierClock/archive/$pkgver.tar.gz")
-sha256sums=('ca60121292eb78a2143f09651a2c43dbe3fdcd0cda2127603d09f0f3eaffe765')
+sha256sums=('SKIP')
 makedepends=('extra-cmake-modules')
 
 # Directories
