@@ -125,35 +125,6 @@ Row {
         }
 
         GroupBox {
-            title: qsTr('Digits Settings')
-            width: mainGroupBox.width
-
-            Column {
-                spacing: units.smallSpacing
-
-                UiSpinBox {
-                    id: digitsWidthSpinBox
-                    minValue: 1
-                    maxValue: 100
-                    stepValue: 1
-                    labelText: qsTr('Digits Width')
-                }
-
-                UiComboBox {
-                    id: digitCapComboBox
-                    labelText: qsTr('Digits Cap')
-                    modelTo: [qsTr('Butt'), qsTr('Round'), qsTr('Square')]
-                }
-
-                UiColorBox {
-                    id: colorDigitBox
-                    titleDialog: qsTr('Select Digits Color')
-                    labelText: qsTr('Digits Color')
-                }
-            }
-        }
-
-        GroupBox {
             title: qsTr('Wallpaper Settings')
             width: mainGroupBox.width
 
@@ -220,6 +191,35 @@ Row {
         spacing: units.smallSpacing
 
         GroupBox {
+            title: qsTr('Digits Settings')
+            width: mainGroupBox.width
+
+            Column {
+                spacing: units.smallSpacing
+
+                UiSpinBox {
+                    id: digitsWidthSpinBox
+                    minValue: 1
+                    maxValue: 100
+                    stepValue: 1
+                    labelText: qsTr('Digits Width')
+                }
+
+                UiComboBox {
+                    id: digitCapComboBox
+                    labelText: qsTr('Digits Cap')
+                    modelTo: [qsTr('Butt'), qsTr('Round'), qsTr('Square')]
+                }
+
+                UiColorBox {
+                    id: colorDigitBox
+                    titleDialog: qsTr('Select Digits Color')
+                    labelText: qsTr('Digits Color')
+                }
+            }
+        }
+
+        GroupBox {
             title: qsTr('Continual Shadows')
             width: mainGroupBox.width
 
@@ -253,6 +253,39 @@ Row {
                 }
             }
         }
+
+        GroupBox {
+            title: qsTr('Dots Settings')
+            width: mainGroupBox.width
+
+            Column {
+                spacing: units.smallSpacing
+
+                CheckBox {
+                    id: showDotsCheckBox
+                    text: qsTr('Show Dots')
+                }
+
+                CheckBox {
+                    id: blinkCheckBox
+                    text: qsTr('Blink Dots')
+                    enabled: showDotsCheckBox.checked
+                }
+
+                UiSpinBox {
+                    id: radiusDotsSpinBox
+                    enabled: showDotsCheckBox.checked
+                    minValue: 1
+                    maxValue: 50
+                    stepValue: 1
+                    labelText: qsTr('Dots Radius')
+                }
+            }
+        }
+    }
+
+    Column {
+        spacing: units.smallSpacing
 
         GroupBox {
             title: qsTr('Control Lines')
@@ -299,10 +332,6 @@ Row {
                 }
             }
         }
-    }
-
-    Column {
-        spacing: units.smallSpacing
 
         GroupBox {
             title: qsTr('FPS settings')
@@ -322,35 +351,6 @@ Row {
                 CheckBox {
                     id: showFpsCheckBox
                     text: qsTr('Show FPS')
-                }
-            }
-        }
-
-        GroupBox {
-            title: qsTr('Dots Settings')
-            width: mainGroupBox.width
-
-            Column {
-                spacing: units.smallSpacing
-
-                CheckBox {
-                    id: showDotsCheckBox
-                    text: qsTr('Show Dots')
-                }
-
-                CheckBox {
-                    id: blinkCheckBox
-                    text: qsTr('Blink Dots')
-                    enabled: showDotsCheckBox.checked
-                }
-
-                UiSpinBox {
-                    id: radiusDotsSpinBox
-                    enabled: showDotsCheckBox.checked
-                    minValue: 1
-                    maxValue: 50
-                    stepValue: 1
-                    labelText: qsTr('Dots Radius')
                 }
             }
         }
@@ -403,8 +403,7 @@ Row {
 
     FileDialog {
         id: fileDialog
-        folder: '~/'
-        title: qsTr("ru.exlmoto.bezierclock", "Please choose an image")
+        title: qsTr("Bezier Clock", "Please choose an image")
         nameFilters: [ "Image files (*.jpg *.png)", "All files (*)" ]
         onAccepted: {
             cfg_Image = fileDialog.fileUrls[0]
