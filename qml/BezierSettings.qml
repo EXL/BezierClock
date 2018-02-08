@@ -24,10 +24,10 @@
 
 import QtQuick 2.0
 
-import org.kde.plasma.core 2.0 // For wallpaper.configuration
+import org.kde.plasma.core 2.0 as Plasmacore // For wallpaper.configuration
 
 Item {
-    property color backgroundColor: wallpaper.configuration.BackgroundColor
+    property color backgroundColor: wallpaper.configuration.Color
     property real visualScaling: wallpaper.configuration.ScalingValue / 10
     property real animDurationUser: wallpaper.configuration.DurationAnim / 100
     property bool continualAnimation: wallpaper.configuration.ContinualAnimation

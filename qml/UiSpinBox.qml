@@ -25,7 +25,7 @@
 import QtQuick 2.0
 import QtQuick.Controls 1.0
 
-import org.kde.plasma.core 2.0 // For units
+import org.kde.plasma.core 2.0 as Plasmacore // For units
 
 Item {
     property string labelText
