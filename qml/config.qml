@@ -60,7 +60,7 @@ Row {
     property alias cfg_BlinkDots: blinkCheckBox.checked
     property alias cfg_RadiusDots: radiusDotsSpinBox.spinBoxValue
 
-    property alias cfg_Image: img_wallpreview.source
+    property alias cfg_Image: imgWallpreview.source
     property alias cfg_FillMode: fillImageComboBox.comboBoxIndex
     property alias cfg_WallEnable: wallpaperEnableComboBox.checked
 
@@ -130,22 +130,20 @@ Row {
 
             Column {
                 spacing: units.smallSpacing
+
                 Rectangle {
-                    border.color: "black"
-                    border.width: 2
                     width: 160
                     height: 90
+                    border.color: "#3daee9"
+                    border.width: 2
+
                     Image {
-                        id: img_wallpreview
+                        id: imgWallpreview
                         anchors.margins: 2
                         anchors.fill: parent
                         fillMode: cfg_FillMode
                         source: cfg_Image
-                        antialiasing: true
-                        MouseArea {
-                            anchors.fill: parent
-                            onClicked: fileDialog.open()
-                        }
+                        antialiasing: false
                         onSourceChanged: {
                             if (source != '') {
                                 wallpaperEnableComboBox.enabled = true
@@ -153,6 +151,11 @@ Row {
                                 wallpaperEnableComboBox.enabled = false
                                 wallpaperEnableComboBox.checked = false
                             }
+                        }
+
+                        MouseArea {
+                            anchors.fill: parent
+                            onClicked: fileDialog.open()
                         }
                     }
                 }
@@ -418,7 +421,7 @@ Row {
         if (cfg_FrameRate <= 1) {
             ConfigUiHelper.resetToDefault();
         }
-        if (img_wallpreview.source != '') {
+        if (imgWallpreview.source != '') {
             wallpaperEnableComboBox.enabled = true
         } else {
             wallpaperEnableComboBox.enabled = false
