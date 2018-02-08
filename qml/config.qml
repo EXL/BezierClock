@@ -346,4 +346,14 @@ Row {
             }
         }
     }
+
+    Component.onCompleted: {
+        // Trying to avoid KDE Plasma bug with ignoring default values
+        // See https://bugs.kde.org/show_bug.cgi?id=367546
+        // And https://bugs.kde.org/show_bug.cgi?id=366390
+        // This bug is still not fixed in Plasma 5.12 LTS
+        if (cfg_FrameRate <= 1) {
+            ConfigUiHelper.resetToDefault();
+        }
+    }
 }
