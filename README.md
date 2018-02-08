@@ -47,7 +47,7 @@ cd ~/Deploy/BezierClock/utils/
 
 ```sh
 cd ~/Deploy/BezierClock/utils/
-plasmapkg2 -t wallpaperplugin -i bezier-clock-v1.0.tar.xz
+plasmapkg2 -t wallpaperplugin -i bezier-clock-v1.1.tar.xz
 ```
 
 ## Build and Install TAR.XZ-package
@@ -79,7 +79,7 @@ makepkg -cf
 
 ```sh
 cd ~/Deploy/BezierClock/utils/
-sudo pacman -U bezier-clock-v1.0-1-any.pkg.tar.xz
+sudo pacman -U bezier-clock-v1.1-1-any.pkg.tar.xz
 ```
 
 ## Build standalone Qt Quick/QML-application

@@ -24,7 +24,7 @@
 #######################################################################################
 
 # Name
-VERSION="v1.0"
+VERSION="v1.1"
 PACKAGE_NAME=bezier-clock-$VERSION.tar.xz
 
 # Dirs
