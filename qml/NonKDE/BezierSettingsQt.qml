@@ -62,4 +62,9 @@ Settings {
     property int animationType: 1
 
     property bool fullscreen: false
+
+    // Just stubs
+    property string imgSource: ''
+    property int imgFillMode: 0
+    property bool wallEnable: false
 }
