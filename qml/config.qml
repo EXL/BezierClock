@@ -184,7 +184,7 @@ Row {
                        'KDE Plasma 5 Port: © <font color="orange"><b>EXL</b></font>, 2016<br>' +
                        '<a href="http://exlmoto.ru/bezier-clock">exlmoto.ru/bezier-clock</a><br>' +
                        '<a href="https://github.com/EXL/BezierClock">github.com/EXL/BezierClock</a><br>' +
-                       'Emails: <a href="mailto:exl@bk.ru">[1]</a>, <a href="mailto:exlmotodev@gmail.com">[2]</a><br><br>' +
+                       'Emails: <a href="mailto:exl@bk.ru">№1</a>, <a href="mailto:exlmotodev@gmail.com">№2</a><br><br>' +
                        'Original: © <font color="green"><b>Jack Frigaard</b></font>, 2014<br>' +
                        '<a href="http://frigaardj.github.io/bezier-clock/">frigaardj.github.io/bezier-clock</a>')
         }
