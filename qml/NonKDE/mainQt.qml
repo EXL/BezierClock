@@ -56,6 +56,11 @@ Window {
         }
     }
 
+    Rectangle {
+        anchors.fill: parent
+        color: (setup.wallEnable) ? 'transparent' : setup.backgroundColor
+    }
+
     Image {
         width: parent.width
         height: parent.height
