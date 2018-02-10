@@ -194,7 +194,7 @@ function showOverlay() {
 }
 
 function showHelpOverlay() {
-    overlayHelp.textTo = qsTr('Bezier Clock v1.1: Options Keys\n' +
+    overlayHelp.textTo = qsTr('Bezier Clock v1.1 | 11-FEB-2018: Options Keys\n' +
                               '+------------------------------------+-----------------------------------+\n' +
                               '| Left Click - Show Control Lines    | Right Click - Continual Animation |\n' +
                               '|                                    |                                   |\n' +
