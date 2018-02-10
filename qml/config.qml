@@ -108,7 +108,15 @@ Row {
                 UiComboBox {
                     id: fillImageComboBox
                     labelText: qsTr('Fill Mode')
-                    modelTo: [qsTr('Scaled and Cropped'), qsTr('Scaled'), qsTr('Scaled, Keep Proportions'), qsTr('Centered'), qsTr('Tiled')]
+                    modelTo: [
+                        qsTr('Scaled'),
+                        qsTr('Scaled, Keep Proportions'),
+                        qsTr('Scaled and Cropped'),
+                        qsTr('Tiled'),
+                        qsTr('Tiled Vertically'),
+                        qsTr('Tiled Horizontally'),
+                        qsTr('Centered'),
+                    ]
                     onComboBoxIndexChanged: {
                         cfg_FillMode = comboBoxIndex
                     }

@@ -50,6 +50,6 @@ function resetToDefault() {
     blinkCheckBox.checked = false;
     radiusDotsSpinBox.spinBoxValue = 5;
 
-    fillImageComboBox.comboBoxIndex = 0;
+    fillImageComboBox.comboBoxIndex = 2;
     wallpaperEnableComboBox.checked = false;
 }

@@ -250,7 +250,7 @@ function resetToDefault() {
     setup.radiusDots = 5;
 
     setup.imgSource = '';
-    setup.imgFillMode = 0;
+    setup.imgFillMode = 2;
     setup.wallEnable = false;
 
     settings.fullscreen = false;
