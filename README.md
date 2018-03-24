@@ -3,6 +3,8 @@ Bezier Clock
 
 Port Processing.js [Bezier Clock by Jack Frigaard](http://frigaardj.github.io/bezier-clock/) to Qt Quick/QML for KDE Plasma 5 Live Wallpaper.
 
+[![Get Bezier Clock on KDE Store](images/KDE_Store_Get_it_on_Label.png)](https://store.kde.org/p/1154469/)
+
 ![Bezier Clock Animation](images/Bezier_clock_animation.gif)
 
 Repository contains code of:
